@@ -46,41 +46,172 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
-
-
+=font
+	font-family: 'Open Sans', sans-serif
+=arr-t
+	+arr(10,6,#fff,t)
+=arr-b
+	+arr(10,6,#fff,b)
+$red: #ff0024
+$red_d: #bc0203
+$black: #3d3d3d
+$text: #333
+$gray: #bbb
+$gray_d: #999
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+font
+	color: $text
+	font-size: 14px 
 	line-height: 1.4
-
+	min-width: 1200px
+a
+	text-decoration: none
+.l-center
+	position: relative
+	margin: 0 auto
+	padding: 0 20px 
+	max-width: 1920px 
+	+clr
 
 // common blocks      
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.header
+	&__top
+		height: 40px
+		line-height: 40px
+		background: $black 
+		.l-center
+			padding: 0
+	&__logo
+		float: left
+		margin: 9px 0 0 20px 
+		+svg(logo,277,20)
+	&__list	
+		+clr
+		li
+			float: left
+			border-right: 1px solid #000
+			box-shadow: inset -1px 0 0 #4d4d4d  
+		a
+			display: block
+			padding: 0 20px 
+			color: #fff
+			font-size: 14px 
+			+tr(color .3s)
+			&:hover
+				color: #ddd 
+		i
+			vertical-align: middle
+			margin-right: 10px
+	&__nav
+		float: left
+	&__info
+		float: right
+	&__main
+		background: $red 
+		.l-center
+			padding: 20px 
+			height: 80px
+	&__catalog
+		position: relative
+		display: block
+		width: 280px
+		height: 40px
+		line-height: 40px
+		color: #fff
+		font-size: 18px
+		font-weight: 700
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 15px
+			margin-top: -3px
+			+arr-t 
+		i
+			font-size: 25px
+			margin-right: 18px
+			vertical-align: middle
+	&__search
+		position: absolute
+		left: 320px
+		right: 20px
+		top: 20px
+.search
+	&__input
+		padding-right: 143px
+		input
+			display: block
+			padding: 0 20px 
+			width: 100%
+			height: 40px
+			+font
+			font-weight: 700
+			height: 40px
+			background: #fff
+			color: $text 
+			box-shadow: inset 0 1px 3px rgba(1, 1, 1, 0.5)
+			+tr(box-shadow .3s)
+			+placeholder
+				color: #b2b2b2  
+			&:focus
+				box-shadow: inset 0 1px 3px rgba(1, 1, 1, 0.2)
+	&__btn
+		position: absolute
+		top: 0
+		right: 0
+		width: 125px
+		height: 40px
+		button
+			display: block
+			position: relative
+			padding-left: 56px
+			width: 100%
+			height: 40px
+			text-align: left
+			color: #fff 
+			+font
+			font-weight: 400 
+			background: $black 
+			+tr(background .3s)
+			&:hover
+				background: darken($black, 5%)
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				width: 40px
+				background: #1a1a1a  
+			&:after
+				content: ""
+				position: absolute
+				top: 11px
+				left: 11px
+				+s(search) 
+.footer
+	background: $black
+	color: $gray
+	&__meta
+		float: left
+	&__info
+		float: right
+	a
+		color: $gray
+	
+.i-logo
+	+svg(icon-logo,40,16)
+.i-login
+	+svg(login,25,18)
+.i-cart
+	+s(cart)
+.i-pin
+	+svg(pin,15,22)
+.icon-clock
+	font-size: 20px
+	color: $red 
 
 
 
