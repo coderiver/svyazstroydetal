@@ -72,9 +72,16 @@ a
 	padding: 0 20px 
 	max-width: 1920px 
 	+clr
-
+.out
+	margin: 0 0 -40px
+	min-height: 100%
+	height: auto !important
+	height: 100%
+.push
+	clear: both
+	height: 40px
+	
 // common blocks      
-
 
 .header
 	&__top
@@ -194,13 +201,40 @@ a
 .footer
 	background: $black
 	color: $gray
+	> .l-center
+		height: 40px
+		line-height: 40px
+		overflow: hidden
 	&__meta
 		float: left
 	&__info
 		float: right
-	a
-		color: $gray
-	
+		a
+			color: $gray
+			+tr(color .3s)
+			&:hover
+				color: #fff
+				span
+					border-bottom-color: transparent 
+		span, 
+		.qb-logo
+			vertical-align: middle
+		span
+			margin-right: 13px
+			+tr(border .3s)
+			border-bottom: 1px solid $gray
+			
+.main
+	margin: 0 auto 
+	padding: 20px
+	max-width: 1920px
+	&__sidebar
+		float: left
+		width: 280px
+	&__content
+		padding-left: 300px
+.qb-logo
+	+s(qb-logo)
 .i-logo
 	+svg(icon-logo,40,16)
 .i-login
@@ -212,12 +246,12 @@ a
 .icon-clock
 	font-size: 20px
 	color: $red 
-
-
-
-
-
-
+.icon-set
+	+s(settings)
+.icon-pricelist
+	+s(pricelist)
+.icon-delivery
+	+s(delivery)
 
 
 

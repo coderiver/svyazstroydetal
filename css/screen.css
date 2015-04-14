@@ -32,10 +32,14 @@ a { text-decoration: none; }
 .l-center { position: relative; margin: 0 auto; padding: 0 20px; max-width: 1920px; *zoom: 1; }
 .l-center:after { content: " "; display: table; clear: both; }
 
+.out { margin: 0 0 -40px; min-height: 100%; height: auto !important; height: 100%; }
+
+.push { clear: both; height: 40px; }
+
 .header__top { height: 40px; line-height: 40px; background: #3d3d3d; }
 .header__top .l-center { padding: 0; }
 .header__logo { float: left; margin: 9px 0 0 20px; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 277px 20px; -o-background-size: 277px 20px; -webkit-background-size: 277px 20px; background-size: 277px 20px; width: 277px; height: 20px; display: inline-block; }
-.ie8 .header__logo { display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 -149px no-repeat; width: 277px; height: 20px; }
+.ie8 .header__logo { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -179px no-repeat; width: 277px; height: 20px; }
 .header__list { *zoom: 1; }
 .header__list:after { content: " "; display: table; clear: both; }
 .header__list li { float: left; border-right: 1px solid #000; box-shadow: inset -1px 0 0 #4d4d4d; }
@@ -63,30 +67,93 @@ a { text-decoration: none; }
 .search__btn button { display: block; position: relative; padding-left: 56px; width: 100%; height: 40px; text-align: left; color: #fff; font-family: "Open Sans", sans-serif; font-weight: 400; background: #3d3d3d; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .search__btn button:hover { background: #303030; }
 .search__btn button:before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40px; background: #1a1a1a; }
-.search__btn button:after { content: ""; position: absolute; top: 11px; left: 11px; display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 -247px no-repeat; width: 17px; height: 17px; }
+.search__btn button:after { content: ""; position: absolute; top: 11px; left: 11px; display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -311px no-repeat; width: 17px; height: 17px; }
 
 .footer { background: #3d3d3d; color: #bbb; }
+.footer > .l-center { height: 40px; line-height: 40px; overflow: hidden; }
 .footer__meta { float: left; }
 .footer__info { float: right; }
-.footer a { color: #bbb; }
+.footer__info a { color: #bbb; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.footer__info a:hover { color: #fff; }
+.footer__info a:hover span { border-bottom-color: transparent; }
+.footer__info span, .footer__info .qb-logo { vertical-align: middle; }
+.footer__info span { margin-right: 13px; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; border-bottom: 1px solid #bbb; }
+
+.main { margin: 0 auto; padding: 20px; max-width: 1920px; }
+.main__sidebar { float: left; width: 280px; }
+.main__content { padding-left: 300px; }
+
+.qb-logo { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -276px no-repeat; width: 25px; height: 25px; }
 
 .i-logo { background: url("../img/svg/icon-logo.svg") no-repeat 0 0; -moz-background-size: 40px 16px; -o-background-size: 40px 16px; -webkit-background-size: 40px 16px; background-size: 40px 16px; width: 40px; height: 16px; display: inline-block; }
-.ie8 .i-logo { display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 -93px no-repeat; width: 40px; height: 17px; }
+.ie8 .i-logo { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -123px no-repeat; width: 40px; height: 17px; }
 
 .i-login { background: url("../img/svg/login.svg") no-repeat 0 0; -moz-background-size: 25px 18px; -o-background-size: 25px 18px; -webkit-background-size: 25px 18px; background-size: 25px 18px; width: 25px; height: 18px; display: inline-block; }
-.ie8 .i-login { display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 -120px no-repeat; width: 25px; height: 19px; }
+.ie8 .i-login { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -150px no-repeat; width: 25px; height: 19px; }
 
-.i-cart { display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 0 no-repeat; width: 24px; height: 21px; }
+.i-cart { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 0 no-repeat; width: 24px; height: 21px; }
 
 .i-pin { background: url("../img/svg/pin.svg") no-repeat 0 0; -moz-background-size: 15px 22px; -o-background-size: 15px 22px; -webkit-background-size: 15px 22px; background-size: 15px 22px; width: 15px; height: 22px; display: inline-block; }
-.ie8 .i-pin { display: inline-block; background: url('../img/icons-s0b943fed88.png') 0 -179px no-repeat; width: 15px; height: 23px; }
+.ie8 .i-pin { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -209px no-repeat; width: 15px; height: 23px; }
 
 .icon-clock { font-size: 20px; color: #ff0024; }
+
+.icon-set { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -338px no-repeat; width: 25px; height: 25px; }
+
+.icon-pricelist { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -242px no-repeat; width: 20px; height: 24px; }
+
+.icon-delivery { display: inline-block; background: url('../img/icons-s8b2199fdaa.png') 0 -93px no-repeat; width: 27px; height: 20px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.promo { margin-left: -10px; overflow: hidden; }
+.promo__col { position: relative; float: left; width: 33.3%; padding-left: 10px; overflow: hidden; }
+.promo__col img { width: 100%; height: auto; }
+.promo__title { position: absolute; top: 130px; left: 0; right: 0; text-align: center; font-weight: 300; text-transform: uppercase; font-size: 120px; color: #fff; letter-spacing: -0.1px; }
+@media only screen and (max-width: 1800px) { .promo__title { font-size: 80px; } }
+@media only screen and (max-width: 1366px) { .promo__title { font-size: 60px; } }
+
+.title { overflow: hidden; margin: 12px 0; font-size: 30px; color: #ff0024; font-weight: 700; text-align: center; }
+.title span { display: inline-block; position: relative; padding: 0 20px; }
+.title span:before, .title span:after { content: ""; position: absolute; top: 22px; height: 2px; width: 3000px; background: #3d3d3d; }
+.title span:before { left: -3000px; }
+.title span:after { right: -3000px; }
+
+.list-icon { margin: 42px 0 0; *zoom: 1; }
+.list-icon:after { content: " "; display: table; clear: both; }
+.list-icon li { float: left; padding: 0 10px; width: 20%; font-size: 21px; font-weight: 700; text-align: center; }
+@media only screen and (max-width: 1600px) { .list-icon li { font-size: 18px; } }
+@media only screen and (max-width: 1366px) { .list-icon li { font-size: 16px; } }
+.list-icon a { display: inline-block; color: #333; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.list-icon a:hover { color: #ff0024; }
+.list-icon a span { display: block; margin-bottom: 22px; height: 80px; line-height: 80px; }
+.list-icon a i { font-size: 80px; color: #ff0024; vertical-align: middle; }
+@media only screen and (max-width: 1600px) { .list-icon a i { font-size: 60px; } }
+
+.nav { counter-reset: list1; }
+.nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; }
+.nav > li:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.nav > li:before { content: ""; position: absolute; top: 30px; left: 9px; border: 2px solid #fff; font-size: 15px; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 26px; counter-increment: list1; content: counter(list1); }
+.nav > li.is-open { background: #ff0024; }
+.nav > li.is-open ol { display: block; }
+.nav > li > a { display: inline-block; vertical-align: middle; line-height: 1.4; font-size: 16px; letter-spacing: -0.1px; }
+.nav > li > a:after { content: ""; position: absolute; right: 15px; top: 50%; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: #fff transparent transparent transparent; }
+.nav a { display: block; position: relative; padding: 12px 35px 12px 55px; color: #fff; text-align: left; }
+.nav ol { display: none; counter-reset: list2; background: #bc0203; font-size: 14px; font-weight: 400; }
+.nav ol li { position: relative; border-top: 1px solid #960202; }
+.nav ol li:first-child { border-top: 0; }
+.nav ol li:before { content: ""; position: absolute; left: 14px; top: 6px; font-size: 16px; font-weight: 700; color: rgba(255, 255, 255, 0.3); counter-increment: list2; content: counter(list1) "." counter(list2) ". "; }
+.nav ol a { padding-top: 6px; min-height: 50px; padding-bottom: 6px; }
+
+.promo-link { display: block; margin: 20px 0; position: relative; padding-left: 55px; height: 70px; line-height: 70px; font-size: 16px; font-weight: 400; color: #fff; background: #3d3d3d; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.promo-link:hover { background: #333; }
+.promo-link.is-active { background: #ff0024; }
+.promo-link span { position: absolute; left: 0; right: 0; bottom: 0; width: 55px; text-align: center; text-align: center; font-size: 0; }
+.promo-link span:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.promo-link i { vertical-align: middle; }
 
 @font-face { font-family: 'Simple-Line-Icons'; src: url("../fonts/Simple-Line-Icons.eot"); src: url("../fonts/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/Simple-Line-Icons.woff") format("woff"), url("../fonts/Simple-Line-Icons.ttf") format("truetype"), url("../fonts/Simple-Line-Icons.svg#Simple-Line-Icons") format("svg"); font-weight: normal; font-style: normal; }
 /* Use the following CSS code if you want to use data attributes for inserting your icons */

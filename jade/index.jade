@@ -7,6 +7,47 @@ html
 	body
 		.out
 			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.promo
+						a.promo__col(href="#")
+							img(src="img/promo1.png", alt="img")
+							span.promo__title Муфты
+						a.promo__col(href="#")
+							img(src="img/promo2.png", alt="img")
+							span.promo__title Кроссы
+						a.promo__col(href="#")
+							img(src="img/promo3.png", alt="img")
+							span.promo__title Кабели
+					.title 
+						span Техническая помощь
+					.js-tabs-content(data-id="#tab-help")
+						ul.list-icon
+							li
+								a(href="#")
+									span
+										i.icon-badge
+									| Декларации
+							li
+								a(href="#")
+									span
+										i.icon-book-open
+									| Инструкции
+							li
+								a(href="#")
+									span
+										i.icon-camcorder
+									| Видеоинструкции
+							li
+								a(href="#")
+									span
+										i.icon-notebook
+									| Заказ каталога
+							li
+								a(href="#")
+									span
+										i.icon-docs
+									| Статьи
 			.push
 		include _footer.jade
-
