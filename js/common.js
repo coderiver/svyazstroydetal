@@ -28,10 +28,19 @@ head.ready(function() {
 	    $(this).addClass("is-active");
 
 	    $("."+tabsGroup).find(".js-tabs-cont").hide();
-	    $('[data-id="'+content+'"]').show();
-	    
+	    $('[data-id="'+content+'"]').fadeIn(500);
+
 	    window.location.hash = this.hash;
 	    return false;
 	});
+
+	$(".js-accord-toggle").on("click",function () {
+		$(".js-accord-toggle").parent().removeClass("is-open");
+		$(".js-accord-list").slideUp(200);
+	    $(this).addClass("is-open");
+	    $(this).parent().find(".js-accord-list").slideDown(200);
+	    return false;
+	});
+
 
 });

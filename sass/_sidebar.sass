@@ -8,6 +8,9 @@
 		font-weight: 700
 		color: #fff 
 		+vertical
+		+tr(background .3s)
+		&:hover
+			background: darken($black, 5%)
 		&:before
 			content: counter(list1)
 			position: absolute
@@ -23,8 +26,8 @@
 			counter-increment: list1 
 		&.is-open
 			background: $red 
-			ol
-				display: block
+			> a
+				pointer-events: none
 		> a
 			display: inline-block
 			vertical-align: middle
@@ -53,6 +56,9 @@
 		li
 			position: relative
 			border-top: 1px solid #960202
+			+tr(background .3s)
+			&:hover
+				background: darken($red_d, 5%)
 			&:first-child
 				border-top: 0
 			&:before

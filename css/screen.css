@@ -163,16 +163,18 @@ a { text-decoration: none; }
 .delivery__info li { margin-bottom: 5px; }
 
 .nav { counter-reset: list1; }
-.nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; }
+.nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .nav > li:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.nav > li:hover { background: #303030; }
 .nav > li:before { content: counter(list1); position: absolute; top: 30px; left: 9px; border: 2px solid #fff; font-size: 15px; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 26px; counter-increment: list1; }
 .nav > li.is-open { background: #ff0024; }
-.nav > li.is-open ol { display: block; }
+.nav > li.is-open > a { pointer-events: none; }
 .nav > li > a { display: inline-block; vertical-align: middle; line-height: 1.4; font-size: 16px; letter-spacing: -0.1px; }
 .nav > li > a:after { content: ""; position: absolute; right: 15px; top: 50%; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: #fff transparent transparent transparent; }
 .nav a { display: block; position: relative; padding: 12px 35px 12px 55px; color: #fff; text-align: left; }
 .nav ol { display: none; counter-reset: list2; background: #bc0203; font-size: 14px; font-weight: 400; }
-.nav ol li { position: relative; border-top: 1px solid #960202; }
+.nav ol li { position: relative; border-top: 1px solid #960202; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.nav ol li:hover { background: #a30203; }
 .nav ol li:first-child { border-top: 0; }
 .nav ol li:before { content: ""; position: absolute; left: 14px; top: 6px; font-size: 16px; font-weight: 700; color: rgba(255, 255, 255, 0.3); counter-increment: list2; content: counter(list1) "." counter(list2) ". "; }
 .nav ol a { padding-top: 6px; min-height: 50px; padding-bottom: 6px; }
