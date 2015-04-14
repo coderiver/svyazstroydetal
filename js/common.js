@@ -4,30 +4,34 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-	 function tabsLoad() {
-	     var hash = window.location.hash;
-	     if (hash) {
-	         $('[href="'+hash+'"]').parents(".js-tabs-group").find(".js-tabs-content").hide();
-	         $('[data-id="'+hash+'"]').show();
-	         $('[href="'+hash+'"]').parents(".js-tabs").find("li").removeClass("is-active");
-	         $('[href="'+hash+'"]').parent().addClass("is-active");
-	     }
+	function tabsLoad() {
+	    var hash = window.location.hash;
+	    if (hash) {
+	        var tabsGroup = $('[href="'+hash+'"]').parents(".js-tabs").attr("data-tabs-group");
+	        $("."+tabsGroup).find(".js-tabs-cont").hide();
+	        $('[data-id="'+hash+'"]').show();
+	        $('[href="'+hash+'"]').parents(".js-tabs").find("a").removeClass("is-active");
+	        $('[href="'+hash+'"]').addClass("is-active");
+	    }
 	     else {
-	         $('.js-tabs li:first').addClass("is-active");
-	         $('.js-tabs').next().show();
-	     }
+	        $('.js-tabs a:first').addClass("is-active");
+	        $('.js-tabs-cont:first').show();
+	    }
 	     
-	 }
+	}
 	tabsLoad();
-	// alert(hash);
-	 $('.js-tabs a').on("click",function (e) {
-	     var content = $(this).attr("href");
-	     $(this).parents(".js-tabs").find("li").removeClass("is-active");
-	     $(this).parent().addClass("is-active");
-	     $(this).parents(".js-tabs-group").find(".js-tabs-content").hide();
-	     $('[data-id="'+content+'"]').show();
-	     window.location.hash = this.hash;
-	     return false;
-	 });
+	$('.js-tabs a').on("click",function (e) {
+	    var content = $(this).attr("href");
+	    var tabsGroup = $('[href="'+content+'"]').parents(".js-tabs").attr("data-tabs-group");
+	   
+	    $(this).parents(".js-tabs").find("a").removeClass("is-active");
+	    $(this).addClass("is-active");
+
+	    $("."+tabsGroup).find(".js-tabs-cont").hide();
+	    $('[data-id="'+content+'"]').show();
+	    
+	    window.location.hash = this.hash;
+	    return false;
+	});
 
 });

@@ -9,7 +9,7 @@
 		color: #fff 
 		+vertical
 		&:before
-			content: ""
+			content: counter(list1)
 			position: absolute
 			top: 30px
 			left: 9px
@@ -21,7 +21,6 @@
 			text-align: center
 			line-height: 26px 
 			counter-increment: list1 
-			content: counter(list1)
 		&.is-open
 			background: $red 
 			ol

@@ -69,15 +69,16 @@
 
 				li
 					a(href="#") Оптические кабели связи
-	a.promo-link.is-active(href="#")
-		span
-			i.icon-set
-		| Техническая помощь
-	a.promo-link(href="#")
-		span
-			i.icon-pricelist
-		| Прайс-лист
-	a.promo-link(href="#")
-		span
-			i.icon-delivery
-		| Доставка
+	.js-tabs(data-tabs-group="js-group-1")
+		a.promo-link.is-active(href="#tab-help")
+			span
+				i.icon-set
+			| Техническая помощь
+		a.promo-link(href="#tab-pricelist")
+			span
+				i.icon-pricelist
+			| Прайс-лист
+		a.promo-link(href="#tab-delivery")
+			span
+				i.icon-delivery
+			| Доставка

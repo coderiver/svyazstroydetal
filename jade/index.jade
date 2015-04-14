@@ -20,34 +20,105 @@ html
 						a.promo__col(href="#")
 							img(src="img/promo3.png", alt="img")
 							span.promo__title Кабели
-					.title 
-						span Техническая помощь
-					.js-tabs-content(data-id="#tab-help")
-						ul.list-icon
-							li
-								a(href="#")
-									span
-										i.icon-badge
-									| Декларации
-							li
-								a(href="#")
-									span
-										i.icon-book-open
-									| Инструкции
-							li
-								a(href="#")
-									span
-										i.icon-camcorder
-									| Видеоинструкции
-							li
-								a(href="#")
-									span
-										i.icon-notebook
-									| Заказ каталога
-							li
-								a(href="#")
-									span
-										i.icon-docs
-									| Статьи
+					.js-tabs-group.js-group-1
+						.js-tabs-cont.tabs-content(data-id="#tab-help")
+							.title 
+								span Техническая помощь
+							ul.list-icon
+								li
+									a(href="#")
+										span
+											i.icon-badge
+										| Декларации
+								li
+									a(href="#")
+										span
+											i.icon-book-open
+										| Инструкции
+								li
+									a(href="#")
+										span
+											i.icon-camcorder
+										| Видеоинструкции
+								li
+									a(href="#")
+										span
+											i.icon-notebook
+										| Заказ каталога
+								li
+									a(href="#")
+										span
+											i.icon-docs
+										| Статьи
+						.js-tabs-cont.tabs-content(data-id="#tab-pricelist")
+							.title 
+								span Прайс-лист
+							ul.list-icon
+								li
+									a(href="#")
+										span
+											span
+												i.icon-docs-custom
+												i.icon-rub
+										| Весь прайс-лист
+								li
+									a(href="#")
+										span
+											span
+												i.icon-doc
+												i.icon-rub
+										| Линейные и стационарные сооружения связи
+								li
+									a(href="#")
+										span
+											span
+												i.icon-doc
+												i.icon-rub
+												em.icon-counter 1
+										| Монтаж и измерения электрических кабелей связи
+								li
+									a(href="#")
+										span
+											span
+												i.icon-doc
+												i.icon-rub
+												em.icon-counter 2
+										| Монтаж и измерения оптических кабелей связи
+								li
+									a(href="#")
+										span
+											span
+												i.icon-doc
+												i.icon-rub
+												em.icon-counter %
+										| Распродажа
+						.js-tabs-cont.tabs-content(data-id="#tab-delivery")
+							.title 
+								span Доставка
+							.delivery
+								.delivery__bg
+									img(src="img/car1.jpg", alt="img")
+									i
+									img(src="img/car3.jpg", alt="img")
+								ul.delivery__list
+									li
+										p Заказ стоимостью более 50 000 руб. в пределах МКАД (+5км за МКАД) — 
+											strong бесплатно
+											sup ** 
+										p Доставка за МКАД свыше 5 км —	к стоимости услуг 30 руб. за км в оба конца
+									li
+										p Заказ стоимостью менее 50 000 руб. в пределах МКАД (+5км за МКАД) — 
+											strong 600 руб
+										p При доставке за МКАД свыше 5км — к стоимости услуг 30 руб. за км в оба конца
+									li
+										p Заказ стоимостью выше 100 000 руб. в будни и  выходные дни), по Москве и МО —
+											strong бесплатно
+											sup **  
+										p Доставка до Транспортной компании п.1. и п.3 бесплатно
+											sup **
+											| , п.2 — 600 руб.
+								ul.delivery__info
+									li *   — Доставка осуществляется до «подъезда» и не включает в себя услуги по разгрузке и подъему товара. 
+									li ** — Бесплатная доставка не распространяется на продукцию ЖБИ
 			.push
 		include _footer.jade

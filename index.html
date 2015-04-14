@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>title</title>
     <meta name="viewport" content="width=1200">
-    <link rel="stylesheet" href="../css/screen.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="out">
@@ -76,19 +76,56 @@
                 <li><a href="#">Оптические кабели связи</a></li>
               </ol>
             </li>
-          </ol><a href="#" class="promo-link is-active"><span><i class="icon-set"></i></span>Техническая помощь</a><a href="#" class="promo-link"><span><i class="icon-pricelist"></i></span>Прайс-лист</a><a href="#" class="promo-link"><span><i class="icon-delivery"></i></span>Доставка</a>
+          </ol>
+          <div data-tabs-group="js-group-1" class="js-tabs"><a href="#tab-help" class="promo-link is-active"><span><i class="icon-set"></i></span>Техническая помощь</a><a href="#tab-pricelist" class="promo-link"><span><i class="icon-pricelist"></i></span>Прайс-лист</a><a href="#tab-delivery" class="promo-link"><span><i class="icon-delivery"></i></span>Доставка</a></div>
         </div>
         <div class="main__content">
           <div class="promo"><a href="#" class="promo__col"><img src="img/promo1.png" alt="img"><span class="promo__title">Муфты</span></a><a href="#" class="promo__col"><img src="img/promo2.png" alt="img"><span class="promo__title">Кроссы</span></a><a href="#" class="promo__col"><img src="img/promo3.png" alt="img"><span class="promo__title">Кабели</span></a></div>
-          <div class="title"> <span>Техническая помощь</span></div>
-          <div data-id="#tab-help" class="js-tabs-content">
-            <ul class="list-icon">
-              <li><a href="#"><span><i class="icon-badge"></i></span>Декларации</a></li>
-              <li><a href="#"><span><i class="icon-book-open"></i></span>Инструкции</a></li>
-              <li><a href="#"><span><i class="icon-camcorder"></i></span>Видеоинструкции</a></li>
-              <li><a href="#"><span><i class="icon-notebook"></i></span>Заказ каталога</a></li>
-              <li><a href="#"><span><i class="icon-docs"></i></span>Статьи</a></li>
-            </ul>
+          <div class="js-tabs-group js-group-1">
+            <div data-id="#tab-help" class="js-tabs-cont tabs-content">
+              <div class="title"> <span>Техническая помощь</span></div>
+              <ul class="list-icon">
+                <li><a href="#"><span><i class="icon-badge"></i></span>Декларации</a></li>
+                <li><a href="#"><span><i class="icon-book-open"></i></span>Инструкции</a></li>
+                <li><a href="#"><span><i class="icon-camcorder"></i></span>Видеоинструкции</a></li>
+                <li><a href="#"><span><i class="icon-notebook"></i></span>Заказ каталога</a></li>
+                <li><a href="#"><span><i class="icon-docs"></i></span>Статьи</a></li>
+              </ul>
+            </div>
+            <div data-id="#tab-pricelist" class="js-tabs-cont tabs-content">
+              <div class="title"> <span>Прайс-лист</span></div>
+              <ul class="list-icon">
+                <li><a href="#"><span><span><i class="icon-docs-custom"></i><i class="icon-rub"></i></span></span>Весь прайс-лист</a></li>
+                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i></span></span>Линейные и стационарные сооружения связи</a></li>
+                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">1</em></span></span>Монтаж и измерения электрических кабелей связи</a></li>
+                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">2</em></span></span>Монтаж и измерения оптических кабелей связи</a></li>
+                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">%</em></span></span>Распродажа</a></li>
+              </ul>
+            </div>
+            <div data-id="#tab-delivery" class="js-tabs-cont tabs-content">
+              <div class="title"> <span>Доставка</span></div>
+              <div class="delivery">
+                <div class="delivery__bg"><img src="img/car1.jpg" alt="img"><i></i><img src="img/car3.jpg" alt="img"></div>
+                <ul class="delivery__list">
+                  <li>
+                    <p>Заказ стоимостью более 50 000 руб. в пределах МКАД (+5км за МКАД) — <strong>бесплатно</strong><sup>** </sup></p>
+                    <p>Доставка за МКАД свыше 5 км —	к стоимости услуг 30 руб. за км в оба конца</p>
+                  </li>
+                  <li>
+                    <p>Заказ стоимостью менее 50 000 руб. в пределах МКАД (+5км за МКАД) — <strong>600 руб</strong></p>
+                    <p>При доставке за МКАД свыше 5км — к стоимости услуг 30 руб. за км в оба конца</p>
+                  </li>
+                  <li>
+                    <p>Заказ стоимостью выше 100 000 руб. в будни и  выходные дни), по Москве и МО —<strong>бесплатно</strong><sup>**  </sup></p>
+                    <p>Доставка до Транспортной компании п.1. и п.3 бесплатно<sup>**</sup>, п.2 — 600 руб.</p>
+                  </li>
+                </ul>
+                <ul class="delivery__info">
+                  <li>*   — Доставка осуществляется до «подъезда» и не включает в себя услуги по разгрузке и подъему товара. </li>
+                  <li>** — Бесплатная доставка не распространяется на продукцию ЖБИ</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
