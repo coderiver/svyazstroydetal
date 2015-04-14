@@ -37,7 +37,7 @@ head.ready(function() {
 	$(".js-accord-toggle").on("click",function () {
 		$(".js-accord-toggle").parent().removeClass("is-open");
 		$(".js-accord-list").slideUp(200);
-	    $(this).addClass("is-open");
+	    $(this).parent().addClass("is-open");
 	    $(this).parent().find(".js-accord-list").slideDown(200);
 	    return false;
 	});
