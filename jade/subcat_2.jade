@@ -1,0 +1,23 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title Subcat 2
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-action
+							.pager
+								a(href="#") 20
+								a(href="#") 50
+								a(href="#") 100
+								a.is-active(href="#") Все
+						.page-title Изделия для сращивания, защиты и укладки оптических волокон
+					
+			.push
+		include _footer.jade

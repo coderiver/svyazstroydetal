@@ -1,8 +1,19 @@
+.page-head
+	position: relative
+	+clr
 .page-title
+	overflow: hidden
 	margin: -3px 0 21px
+	padding-right: 200px
 	font-size: 32px
 	+reg
 	color: $text 
+.page-action
+	float: right
+	width: 300px
+	+clr
+	.pager
+		float: right
 .box
 	border: 1px solid $border
 	&__in
@@ -159,7 +170,7 @@
 				display: none
 .btn
 	display: inline-block
-	padding: 0 20px 
+	padding: 0 52px 
 	height: 40px
 	background: $red
 	+tr(background .3s)
@@ -173,10 +184,20 @@
 		background: darken($red_d, 5%)
 	&_width
 		display: block
+		padding: 0 20px 
 		width: 100%
+	&_small
+		height: 38px
+	&_dark
+		background: $black
+		&:hover
+			background: #000 
 a.btn
 	line-height: 40px
-	
+a.btn_small
+	padding: 0 33px 
+	line-height: 38px
+
 .cats-wrap
 	overflow: hidden
 	margin: -10px -10px 0 -10px 
@@ -184,6 +205,10 @@ a.btn
 	float: left
 	width: 20%
 	padding: 10px
+	font-size: 18px
+	+r(1600)
+		width: 25%
+		font-size: 16px
 	&__in
 		position: relative
 		display: block
@@ -197,7 +222,8 @@ a.btn
 			color: $text  
 	&__img
 		text-align: center
-		max-height: 100%
+		img
+			max-width: 100%
 	&__title
 		position: absolute
 		bottom: 0
@@ -206,7 +232,6 @@ a.btn
 		padding: 20px 
 		min-height: 100px
 		background: #fff
-		font-size: 18px
 		+reg
 		line-height: 1.1  
 	.icon-camera
@@ -214,3 +239,82 @@ a.btn
 		margin: 40px 0 0 
 		font-size: 80px
 		color: $border 
+		
+.pager
+	a
+		float: left
+		margin-left: -1px
+		min-width: 40px
+		height: 40px
+		line-height: 40px		
+		text-align: center
+		font-size: 14px
+		+bold
+		color: $text
+		border: 1px solid $border  
+		+tr(background .3s)
+		&:hover
+			background: #f7f7f7 
+		&.is-active
+			color: $red 
+			background: #f7f7f7 
+		&:last-child
+			min-width: 60px
+.accord
+	border: 1px solid $border
+	margin-bottom: -1px
+	&.is-open
+		.accord__title
+			color: $red
+			pointer-events: none 
+			&:after
+				+rotate(-180)
+	&__title
+		position: relative
+		padding: 17px 53px 17px 20px 
+		font-size: 18px
+		color: $text
+		cursor: pointer
+		+tr(color .3s)
+		&:hover
+			color: $red 
+			&:after
+				will-change: transform
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			right: 20px
+			+tr(transform .3s)
+			+arr(10,6,$red,b)
+	&__body
+		display: none	
+		border-top: 1px solid $border 	
+		.download
+			&:first-child
+				border: 0	
+.download
+	display: table
+	width: 100%
+	border-top: 1px solid $border
+	font-size: 14px
+	+reg
+	color: $text 
+	&__main,
+	&__action
+		display: table-cell
+		vertical-align: middle
+	&__main
+		padding: 0 20px
+		a
+			color: $text
+			+tr(color .3s)
+			&:hover
+				color: $red 
+	&__action
+		text-align: right
+		span
+			padding-right: 20px
+			font-size: 12px
+			+bold
+			color: $gray_d 

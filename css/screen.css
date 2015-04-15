@@ -80,9 +80,9 @@ a { text-decoration: none; }
 .footer__info span, .footer__info .qb-logo { vertical-align: middle; }
 .footer__info span { margin-right: 13px; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; border-bottom: 1px solid #bbb; }
 
-.main { margin: 0 auto; padding: 20px; max-width: 1920px; }
-.main__sidebar { float: left; margin-top: -20px; width: 280px; }
-.main__content { padding-left: 300px; }
+.main { margin: 0 auto; padding: 0 20px; max-width: 1920px; }
+.main__sidebar { position: relative; z-index: 2; float: left; width: 280px; }
+.main__content { position: relative; padding: 20px 0 20px 20px; overflow: hidden; }
 
 .tabs-content { display: none; }
 
@@ -494,7 +494,14 @@ you can use the generic selector below, but it's slower:
 .delivery__info { font-size: 11px; font-weight: 600; }
 .delivery__info li { margin-bottom: 5px; }
 
-.page-title { margin: -3px 0 21px; font-size: 32px; font-weight: 400; color: #333; }
+.page-head { position: relative; *zoom: 1; }
+.page-head:after { content: " "; display: table; clear: both; }
+
+.page-title { overflow: hidden; margin: -3px 0 21px; padding-right: 200px; font-size: 32px; font-weight: 400; color: #333; }
+
+.page-action { float: right; width: 300px; *zoom: 1; }
+.page-action:after { content: " "; display: table; clear: both; }
+.page-action .pager { float: right; }
 
 .box { border: 1px solid #ccc; }
 .box__in { padding: 27px 40px 40px; }
@@ -544,21 +551,51 @@ you can use the generic selector below, but it's slower:
 .checkbox span i { position: absolute; top: 0; left: 0; width: 20px; height: 20px; background: #F7F7F7; box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5); }
 .checkbox span i:before { content: ""; position: absolute; top: 4px; left: 3px; display: inline-block; background: url('../img/icons-s3f1a0e24f5.png') 0 -31px no-repeat; width: 15px; height: 12px; display: none; }
 
-.btn { display: inline-block; padding: 0 20px; height: 40px; background: #ff0024; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; font-size: 14px; font-family: "Open Sans", sans-serif; font-weight: 700; color: #fff; }
+.btn { display: inline-block; padding: 0 52px; height: 40px; background: #ff0024; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; font-size: 14px; font-family: "Open Sans", sans-serif; font-weight: 700; color: #fff; }
 .btn:hover { background: #bc0203; }
 .btn:active { background: #a30203; }
-.btn_width { display: block; width: 100%; }
+.btn_width { display: block; padding: 0 20px; width: 100%; }
+.btn_small { height: 38px; }
+.btn_dark { background: #3d3d3d; }
+.btn_dark:hover { background: #000; }
 
 a.btn { line-height: 40px; }
 
+a.btn_small { padding: 0 33px; line-height: 38px; }
+
 .cats-wrap { overflow: hidden; margin: -10px -10px 0 -10px; }
 
-.cat { float: left; width: 20%; padding: 10px; }
+.cat { float: left; width: 20%; padding: 10px; font-size: 18px; }
+@media only screen and (max-width: 1600px) { .cat { width: 25%; font-size: 16px; } }
 .cat__in { position: relative; display: block; border: 1px solid #ccc; height: 260px; overflow: hidden; color: #ff0024; -moz-transition: color 0.3s, border 0.3s; -o-transition: color 0.3s, border 0.3s; -webkit-transition: color 0.3s, border 0.3s; transition: color 0.3s, border 0.3s; }
 .cat__in:hover { border-color: #ff0024; color: #333; }
-.cat__img { text-align: center; max-height: 100%; }
-.cat__title { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; min-height: 100px; background: #fff; font-size: 18px; font-weight: 400; line-height: 1.1; }
+.cat__img { text-align: center; }
+.cat__img img { max-width: 100%; }
+.cat__title { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; min-height: 100px; background: #fff; font-weight: 400; line-height: 1.1; }
 .cat .icon-camera { display: inline-block; margin: 40px 0 0; font-size: 80px; color: #ccc; }
+
+.pager a { float: left; margin-left: -1px; min-width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 14px; font-weight: 700; color: #333; border: 1px solid #ccc; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.pager a:hover { background: #f7f7f7; }
+.pager a.is-active { color: #ff0024; background: #f7f7f7; }
+.pager a:last-child { min-width: 60px; }
+
+.accord { border: 1px solid #ccc; margin-bottom: -1px; }
+.accord.is-open .accord__title { color: #ff0024; pointer-events: none; }
+.accord.is-open .accord__title:after { -ms-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
+.accord__title { position: relative; padding: 17px 53px 17px 20px; font-size: 18px; color: #333; cursor: pointer; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.accord__title:hover { color: #ff0024; }
+.accord__title:hover:after { will-change: transform; }
+.accord__title:after { content: ""; position: absolute; top: 50%; right: 20px; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: #ff0024 transparent transparent transparent; }
+.accord__body { display: none; border-top: 1px solid #ccc; }
+.accord__body .download:first-child { border: 0; }
+
+.download { display: table; width: 100%; border-top: 1px solid #ccc; font-size: 14px; font-weight: 400; color: #333; }
+.download__main, .download__action { display: table-cell; vertical-align: middle; }
+.download__main { padding: 0 20px; }
+.download__main a { color: #333; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.download__main a:hover { color: #ff0024; }
+.download__action { text-align: right; }
+.download__action span { padding-right: 20px; font-size: 12px; font-weight: 700; color: #999; }
 
 .nav { counter-reset: list1; }
 .nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }

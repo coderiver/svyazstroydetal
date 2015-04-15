@@ -51,8 +51,8 @@ head.ready(function() {
 
 // accordeon		
 	$(".js-accord-toggle").on("click",function () {
-		$(".js-accord-toggle").parent().removeClass("is-open");
-		$(".js-accord-list").slideUp(200);
+		$(this).parents(".js-accord-group").find(".js-accord").removeClass("is-open");
+		$(this).parents(".js-accord-group").find(".js-accord-list").slideUp(200);
 	    $(this).parent().addClass("is-open");
 	    $(this).parent().find(".js-accord-list").slideDown(200);
 	    return false;
