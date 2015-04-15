@@ -48,6 +48,17 @@
 // 	+jpg(bla)
 =font
 	font-family: 'Open Sans', sans-serif
+=light
+	font-weight: 300
+=reg
+	font-weight: 400 
+=sbold
+	font-weight: 600 
+=bold
+	font-weight: 700
+=ebold
+	font-weight: 800
+	
 =arr-t
 	+arr(10,6,#fff,t)
 =arr-b
@@ -58,9 +69,12 @@ $black: #3d3d3d
 $text: #333
 $gray: #bbb
 $gray_d: #999
+$border: #ccc
+$green: #0c0
 body
 	+font
 	color: $text
+	+reg
 	font-size: 14px 
 	line-height: 1.4
 	min-width: 1200px
@@ -85,9 +99,12 @@ a
 
 .header
 	&__top
+		position: relative
+		z-index: 2 
 		height: 40px
 		line-height: 40px
 		background: $black 
+		box-shadow: 0 0 5px rgba(#000,.7) 
 		.l-center
 			padding: 0
 	&__logo
@@ -106,6 +123,9 @@ a
 			color: #fff
 			font-size: 14px 
 			+tr(color .3s)
+			+r(1400)
+				font-size: 12px
+				padding: 0 15px 
 			&:hover
 				color: #ddd 
 		i
@@ -128,7 +148,7 @@ a
 		line-height: 40px
 		color: #fff
 		font-size: 18px
-		font-weight: 700
+		+bold
 		&:before
 			content: ""
 			position: absolute
@@ -154,7 +174,7 @@ a
 			width: 100%
 			height: 40px
 			+font
-			font-weight: 700
+			+bold
 			height: 40px
 			background: #fff
 			color: $text 
@@ -179,7 +199,7 @@ a
 			text-align: left
 			color: #fff 
 			+font
-			font-weight: 400 
+			+reg 
 			background: $black 
 			+tr(background .3s)
 			&:hover
@@ -230,36 +250,13 @@ a
 	max-width: 1920px
 	&__sidebar
 		float: left
+		margin-top: -20px
 		width: 280px
 	&__content
 		padding-left: 300px
 .tabs-content
 	display: none		
 
-.qb-logo
-	+s(qb-logo)
-.i-logo
-	+svg(icon-logo,40,16)
-.i-login
-	+svg(login,25,18)
-.i-cart
-	+s(cart)
-.i-pin
-	+svg(pin,15,22)
-.icon-clock
-	font-size: 20px
-	color: $red 
-.icon-set
-	+s(settings)
-.icon-pricelist
-	+s(pricelist)
-.icon-delivery
-	+s(delivery)
-
-.icon-docs-custom
-	+s(docs)
-.icon-rub
-	+s(rub)
 
 
 

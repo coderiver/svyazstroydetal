@@ -1,0 +1,72 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title new reg
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-title Регистрация
+					.box
+						.box__in
+							.form
+								form.js-validate
+									.form__col
+										label.field
+											span.field__title Имя 
+												sup *
+											span.field__body
+												input.input(type="text", tabindex="1", name="firstname", required)
+												i.icon-check
+										label.field
+											span.field__title Адрес электронной почты  
+												sup *
+											span.field__body
+												input.input(type="email", tabindex="3", name="email", required)
+												i.icon-check
+										.js-password
+											label.field
+												span.field__title Пароль 
+													sup *
+												span.field__body
+													input.input(type="password", id="password", tabindex="4", name="password", required)
+													i.icon-check
+											.progress-wrap.js-password-progress
+												.progress-wrap__label Надежность
+										.field
+											span.field__title Защита
+												sup *
+											.field__body
+												.captcha
+													.captcha__img
+														img(src="img/captcha.png", alt="img")
+													.captcha__input
+														input.input(type="text", tabindex="6", name="text", required)
+														i.icon-check
+										label.checkbox
+											input(type="checkbox", name="checkbox")
+											span
+												i
+												| Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.
+										button.btn.btn_width(type="submit") Зарегироваться
+									.form__col
+										label.field
+											span.field__title Фамилия 
+											span.field__body
+												input.input(type="text", tabindex="2", name="lastname", required)
+												i.icon-check
+										.field
+											span.field__title
+											span.field__body
+										label.field
+											span.field__title Повторите пароль  
+												sup *
+											span.field__body
+												input.input(type="password", tabindex="5", name="confirm_password", required)
+												i.icon-check
+			.push
+		include _footer.jade

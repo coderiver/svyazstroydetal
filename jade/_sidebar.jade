@@ -1,8 +1,8 @@
 .main__sidebar
-	ol.nav
+	ol.nav.js-accord
 		li.is-open
-			a(href="#") Линейные и стационарные сооружения связи
-			ol
+			a(href="#").js-accord-toggle Линейные и стационарные сооружения связи
+			ol.js-accord-list(style="display:block")
 				li
 					a(href="#") Муфты для оптических кабелей
 
@@ -24,8 +24,8 @@
 				li
 					a(href="#") Оптические кабели связи
 		li
-			a(href="#") Монтаж и измерения электрических кабелей связи
-			ol
+			a(href="#").js-accord-toggle Монтаж и измерения электрических кабелей связи
+			ol.js-accord-list
 				li
 					a(href="#") Муфты для оптических кабелей
 
@@ -47,8 +47,8 @@
 				li
 					a(href="#") Оптические кабели связи
 		li
-			a(href="#") Монтаж и измерения оптических кабелей связи
-			ol
+			a(href="#").js-accord-toggle Монтаж и измерения оптических кабелей связи
+			ol.js-accord-list
 				li
 					a(href="#") Муфты для оптических кабелей
 
@@ -69,15 +69,15 @@
 
 				li
 					a(href="#") Оптические кабели связи
-		a.promo-link.is-active(href="#")
-			span
-				i.icon-set
-			| Техническая помощь
-		a.promo-link(href="#")
-			span
-				i.icon-pricelist
-			| Прайс-лист
-		a.promo-link(href="#")
-			span
-				i.icon-delivery
-			| Доставка
+	a.promo-link.is-active(href="#")
+		span
+			i.icon-set
+		| Техническая помощь
+	a.promo-link(href="#")
+		span
+			i.icon-pricelist
+		| Прайс-лист
+	a.promo-link(href="#")
+		span
+			i.icon-delivery
+		| Доставка

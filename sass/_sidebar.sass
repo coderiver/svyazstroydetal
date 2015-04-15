@@ -5,7 +5,7 @@
 		position: relative 
 		min-height: 90px
 		background: $black
-		font-weight: 700
+		+bold
 		color: #fff 
 		+vertical
 		+tr(background .3s)
@@ -28,19 +28,25 @@
 			background: $red 
 			> a
 				pointer-events: none
+				&:after
+					+rotate(-180)
 		> a
 			display: inline-block
 			vertical-align: middle
 			line-height: 1.4
 			font-size: 16px
 			letter-spacing: -.1px
+			&:hover
+				&:after
+					will-change: transform
 			&:after
 				content: ""
 				position: absolute
 				right: 15px
 				top: 50%
-				margin-top: -3px
+				margin-top: 0
 				+arr-b
+				+tr(transform .3s)
 	a
 		display: block
 		position: relative
@@ -52,7 +58,7 @@
 		counter-reset: list2
 		background: $red_d 
 		font-size: 14px
-		font-weight: 400 
+		+reg 
 		li
 			position: relative
 			border-top: 1px solid #960202
@@ -67,7 +73,7 @@
 				left: 14px
 				top: 6px
 				font-size: 16px
-				font-weight: 700 
+				+bold 
 				color: rgba(#fff,.3) 
 				counter-increment: list2
 				content: counter(list1) "." counter(list2) ". "
@@ -84,7 +90,7 @@
 	height: 70px
 	line-height: 70px
 	font-size: 16px
-	font-weight: 400
+	+reg
 	color: #fff 
 	background: $black  
 	+tr(background .3s)

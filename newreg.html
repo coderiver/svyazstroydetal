@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=1200">
     <link rel="stylesheet" href="css/screen.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <title>index</title>
+    <title>new reg</title>
   </head>
   <body>
     <div class="out">
@@ -76,54 +76,49 @@
                 <li><a href="#">Оптические кабели связи</a></li>
               </ol>
             </li>
-          </ol>
-          <div data-tabs-group="js-group-1" class="js-tabs"><a href="#tab-help" class="promo-link is-active"><span><i class="icon-set"></i></span>Техническая помощь</a><a href="#tab-pricelist" class="promo-link"><span><i class="icon-pricelist"></i></span>Прайс-лист</a><a href="#tab-delivery" class="promo-link"><span><i class="icon-delivery"></i></span>Доставка</a></div>
+          </ol><a href="#" class="promo-link is-active"><span><i class="icon-set"></i></span>Техническая помощь</a><a href="#" class="promo-link"><span><i class="icon-pricelist"></i></span>Прайс-лист</a><a href="#" class="promo-link"><span><i class="icon-delivery"></i></span>Доставка</a>
         </div>
         <div class="main__content">
-          <div class="promo"><a href="#" class="promo__col"><img src="img/promo1.png" alt="img"><span class="promo__title">Муфты</span></a><a href="#" class="promo__col"><img src="img/promo2.png" alt="img"><span class="promo__title">Кроссы</span></a><a href="#" class="promo__col"><img src="img/promo3.png" alt="img"><span class="promo__title">Кабели</span></a></div>
-          <div class="js-tabs-group js-group-1">
-            <div data-id="#tab-help" class="js-tabs-cont tabs-content">
-              <div class="title"> <span>Техническая помощь</span></div>
-              <ul class="list-icon">
-                <li><a href="#"><span><i class="icon-badge"></i></span>Декларации</a></li>
-                <li><a href="#"><span><i class="icon-book-open"></i></span>Инструкции</a></li>
-                <li><a href="#"><span><i class="icon-camcorder"></i></span>Видеоинструкции</a></li>
-                <li><a href="#"><span><i class="icon-notebook"></i></span>Заказ каталога</a></li>
-                <li><a href="#"><span><i class="icon-docs"></i></span>Статьи</a></li>
-              </ul>
-            </div>
-            <div data-id="#tab-pricelist" class="js-tabs-cont tabs-content">
-              <div class="title"> <span>Прайс-лист</span></div>
-              <ul class="list-icon">
-                <li><a href="#"><span><span><i class="icon-docs-custom"></i><i class="icon-rub"></i></span></span>Весь прайс-лист</a></li>
-                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i></span></span>Линейные и стационарные сооружения связи</a></li>
-                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">1</em></span></span>Монтаж и измерения электрических кабелей связи</a></li>
-                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">2</em></span></span>Монтаж и измерения оптических кабелей связи</a></li>
-                <li><a href="#"><span><span><i class="icon-doc"></i><i class="icon-rub"></i><em class="icon-counter">%</em></span></span>Распродажа</a></li>
-              </ul>
-            </div>
-            <div data-id="#tab-delivery" class="js-tabs-cont tabs-content">
-              <div class="title"> <span>Доставка</span></div>
-              <div class="delivery">
-                <div class="delivery__bg"><img src="img/car1.jpg" alt="img"><i></i><img src="img/car3.jpg" alt="img"></div>
-                <ul class="delivery__list">
-                  <li>
-                    <p>Заказ стоимостью более 50 000 руб. в пределах МКАД (+5км за МКАД) — <strong>бесплатно</strong><sup>** </sup></p>
-                    <p>Доставка за МКАД свыше 5 км —	к стоимости услуг 30 руб. за км в оба конца</p>
-                  </li>
-                  <li>
-                    <p>Заказ стоимостью менее 50 000 руб. в пределах МКАД (+5км за МКАД) — <strong>600 руб</strong></p>
-                    <p>При доставке за МКАД свыше 5км — к стоимости услуг 30 руб. за км в оба конца</p>
-                  </li>
-                  <li>
-                    <p>Заказ стоимостью выше 100 000 руб. в будни и  выходные дни), по Москве и МО —<strong>бесплатно</strong><sup>**  </sup></p>
-                    <p>Доставка до Транспортной компании п.1. и п.3 бесплатно<sup>**</sup>, п.2 — 600 руб.</p>
-                  </li>
-                </ul>
-                <ul class="delivery__info">
-                  <li>*   — Доставка осуществляется до «подъезда» и не включает в себя услуги по разгрузке и подъему товара. </li>
-                  <li>** — Бесплатная доставка не распространяется на продукцию ЖБИ</li>
-                </ul>
+          <div class="page-title">Регистрация</div>
+          <div class="box">
+            <div class="box__in">
+              <div class="form">
+                <form class="js-validate">
+                  <div class="form__col">
+                    <label class="field"><span class="field__title">Имя <sup>*</sup></span><span class="field__body">
+                        <input type="text" tabindex="1" name="firstname" required class="input"><i class="icon-check"></i></span></label>
+                    <label class="field"><span class="field__title">Адрес электронной почты  <sup>*</sup></span><span class="field__body">
+                        <input type="email" tabindex="3" name="email" required class="input"><i class="icon-check"></i></span></label>
+                    <div class="js-password">
+                      <label class="field"><span class="field__title">Пароль <sup>*</sup></span><span class="field__body">
+                          <input type="password" id="password" tabindex="4" name="password" required class="input"><i class="icon-check"></i></span></label>
+                      <div class="progress-wrap js-password-progress">
+                        <div class="progress-wrap__label">Надежность</div>
+                      </div>
+                    </div>
+                    <div class="field"><span class="field__title">Защита<sup>*</sup></span>
+                      <div class="field__body">
+                        <div class="captcha">
+                          <div class="captcha__img"><img src="img/captcha.png" alt="img"></div>
+                          <div class="captcha__input">
+                            <input type="text" tabindex="6" name="text" required class="input"><i class="icon-check"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkbox"><span><i></i>Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.</span>
+                    </label>
+                    <button type="submit" class="btn btn_width">Зарегироваться</button>
+                  </div>
+                  <div class="form__col">
+                    <label class="field"><span class="field__title">Фамилия </span><span class="field__body">
+                        <input type="text" tabindex="2" name="lastname" required class="input"><i class="icon-check"></i></span></label>
+                    <div class="field"><span class="field__title"></span><span class="field__body"></span></div>
+                    <label class="field"><span class="field__title">Повторите пароль  <sup>*</sup></span><span class="field__body">
+                        <input type="password" tabindex="5" name="confirm_password" required class="input"><i class="icon-check"></i></span></label>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
