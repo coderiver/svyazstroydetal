@@ -483,7 +483,7 @@ you can use the generic selector below, but it's slower:
 .delivery__bg i { position: absolute; top: 0; bottom: 0; left: 500px; right: 560px; height: 246px; background: url(../img/car2.jpg) 0 0 repeat-x; }
 .delivery__list { position: absolute; top: -25px; left: 0; right: 200px; *zoom: 1; text-align: center; font-size: 14px; counter-reset: list3; }
 .delivery__list:after { content: " "; display: table; clear: both; }
-.delivery__list li:before { content: counter(list3); counter-increment: list3; }
+.delivery__list > li:before { content: counter(list3); counter-increment: list3; }
 @media only screen and (max-width: 1600px) { .delivery__list { position: static; margin-bottom: 30px; padding-top: 10px; overflow: hidden; } }
 .delivery__list li { float: left; padding: 0 4%; width: 33.3%; }
 @media only screen and (max-width: 1800px) { .delivery__list li { padding: 0 20px; } }
@@ -582,7 +582,7 @@ a.btn_small { padding: 0 33px; line-height: 38px; }
 .accord { border: 1px solid #ccc; margin-bottom: -1px; }
 .accord.is-open .accord__title { color: #ff0024; pointer-events: none; }
 .accord.is-open .accord__title:after { -ms-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
-.accord__title { position: relative; padding: 17px 53px 17px 20px; font-size: 18px; color: #333; cursor: pointer; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.accord__title { position: relative; padding: 17px 53px 17px 20px; font-size: 18px; color: #333; cursor: pointer; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .accord__title:hover { color: #ff0024; }
 .accord__title:hover:after { will-change: transform; }
 .accord__title:after { content: ""; position: absolute; top: 50%; right: 20px; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: #ff0024 transparent transparent transparent; }
@@ -596,6 +596,14 @@ a.btn_small { padding: 0 33px; line-height: 38px; }
 .download__main a:hover { color: #ff0024; }
 .download__action { text-align: right; }
 .download__action span { padding-right: 20px; font-size: 12px; font-weight: 700; color: #999; }
+
+.tabs { margin: 20px 0; font-size: 0; counter-reset: listtabs; }
+.tabs > li:before { content: counter(listtabs); counter-increment: listtabs; }
+.tabs__item { position: relative; display: inline-block; margin-right: 20px; vertical-align: top; width: 300px; font-size: 12px; font-weight: 700; text-transform: uppercase; background: #3d3d3d; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.tabs__item:before { position: absolute; top: 50%; left: 20px; margin-top: -15px; border: 2px solid #fff; font-size: 15px; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 26px; color: #fff; }
+.tabs__item:hover { background: #000; }
+.tabs__item.is-active { background: #ff0024; }
+.tabs__link { display: block; padding: 14px 30px 14px 60px; color: #fff; }
 
 .nav { counter-reset: list1; }
 .nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }

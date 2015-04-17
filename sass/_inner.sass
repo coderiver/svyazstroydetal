@@ -276,6 +276,7 @@ a.btn_small
 		color: $text
 		cursor: pointer
 		+tr(color .3s)
+		+nosel
 		&:hover
 			color: $red 
 			&:after
@@ -318,3 +319,41 @@ a.btn_small
 			font-size: 12px
 			+bold
 			color: $gray_d 
+			
+.tabs
+	margin: 20px 0 
+	font-size: 0
+	+counter(tabs)
+	&__item
+		position: relative
+		display: inline-block
+		margin-right: 20px
+		vertical-align: top
+		width: 300px
+		font-size: 12px
+		+bold
+		text-transform: uppercase
+		background: $black
+		+tr(background .3s)
+		&:before
+			position: absolute
+			top: 50%
+			left: 20px
+			margin-top: -15px
+			border: 2px solid #fff
+			font-size: 15px
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			text-align: center
+			line-height: 26px 
+			color: #fff 
+		&:hover
+			background: #000 
+		&.is-active
+			background: $red 
+	&__link
+		display: block
+		padding: 14px 30px 14px 60px
+		color: #fff 
+		 
