@@ -1,0 +1,110 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title catalogues
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-title Каталог продукции
+					.cols-wrap
+						.col-left
+							ul.tabs
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Линейные и станционные сооружения связи
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Монтаж и измерение электрических кабелей связи
+								li.tabs__item.is-active
+									a(href="#").tabs__link 
+										| Монтаж и измерение оптических кабелей связи
+							.wrap
+								.file-wrap
+									a.file(href="#")
+										.icon-file
+											em 3
+											span PDF
+										.file__main
+											span.file__name Каталог раздела 3 
+											span.file__info PDF 8,32 МБ
+								.file-wrap
+									a.file(href="#")
+										.icon-file
+											i
+											span PDF
+										.file__main
+											span.file__name Весь каталог
+											span.file__info PDF 8,32 МБ
+						.col-right
+							.order-catalog
+								img(src="img/svg/letter.svg", alt="img", width="300")
+								.order-catalog__in
+									i.icon-envelope-letter
+									.order-catalog__link
+										a(href="#") Заказать печатный каталог
+					ul.download-wrap
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.1 
+									| Видеоинструкция ВОКС-Ф
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.2 
+									| Продукты и решения для волоконно-оптических сетей (станционная сторона)
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.3 
+									| Продукты и решения для распределительных сетей (сторона абонента)
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.4 
+									| Оборудование для ВОЛС специального назначения
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.5 
+									| Приборы, инструменты и приспособления для работы с ОК
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+						li.download.download_big
+							.download__main 
+								a(href="#") 
+									span 3.6 
+									| Оптические кабели связи
+							.download__action
+								span.download__info PDF 541,45 КБ
+								a.btn.btn_small.btn_dark(href="#")
+									span Скачать
+									
+								
+				
+			.push
+		include _footer.jade

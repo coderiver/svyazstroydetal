@@ -301,33 +301,62 @@ a.btn_small
 	font-size: 14px
 	+reg
 	color: $text 
+	&_big
+		border: 1px solid $border
+		margin-bottom: -1px
+		font-size: 18px
+		.download__main
+			padding: 18px 20px 
 	&__main,
 	&__action
 		display: table-cell
 		vertical-align: middle
 	&__main
-		padding: 0 20px
+		padding: 11px 20px
 		a
 			color: $text
 			+tr(color .3s)
 			&:hover
 				color: $red 
+		span
+			display: inline-block
+			margin-right: 4px
+			color: $gray_d
+			+bold
+			font-size: 18px 
 	&__action
 		text-align: right
-		span
-			padding-right: 20px
-			font-size: 12px
-			+bold
-			color: $gray_d 
-			
+		padding-right: 145px
+		position: relative
+		.btn
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			padding: 0
+			text-align: center
+			width: 125px
+			height: 100%
+			line-height: 1
+			+vertical
+			span
+				vertical-align: middle
+				padding: 0
+				font-size: 14px
+				color: #fff 
+	&__info
+		padding-right: 20px
+		font-size: 12px
+		+bold
+		color: $gray_d 
 .tabs
-	margin: 20px 0 
+	margin: 20px 0 0 
 	font-size: 0
 	+counter(tabs)
 	&__item
 		position: relative
 		display: inline-block
-		margin-right: 20px
+		margin: 0 20px 20px 0
 		vertical-align: top
 		width: 300px
 		font-size: 12px
@@ -356,4 +385,67 @@ a.btn_small
 		display: block
 		padding: 14px 30px 14px 60px
 		color: #fff 
-		 
+
+.file-wrap
+	float: left
+	width: 300px
+	margin-right: 20px
+.file
+	display: inline-block
+	margin: 15px 0 
+	vertical-align: top
+	position: relative
+	font-size: 18px
+	+reg
+	&:hover
+		.file__name
+			color: $red_d 
+	.icon-file,
+	&__main
+		display: inline-block
+		padding-left: 12px
+		vertical-align: middle
+	&__name
+		display: block
+		color: $red
+		+tr(color .3s)
+	&__info
+		color: $gray_d 
+.cols-wrap
+	+clr
+.col-left
+	float: left
+	+r(1600)
+		float: none
+.col-right
+	float: right
+	+r(1600)
+		float: none
+.order-catalog
+	position: relative
+	width: 300px
+	margin-bottom: 15px
+	&__in
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		text-align: center
+	.icon-envelope-letter
+		margin-top: 20px
+		display: inline-block
+		font-size: 60px
+		color: $red
+	&__link
+		position: absolute
+		left: 65px
+		right: 65px
+		bottom: 23px
+		line-height: 1.1
+		a
+			font-size: 18px
+			color: $red 
+			+tr(color .3s)
+			&:hover
+				color: $red_d 

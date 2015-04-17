@@ -21,3 +21,40 @@
 	+s(docs)
 .icon-rub
 	+s(rub)
+.icon-file
+	position: relative
+	+svg(file,42,60)
+	+bold
+	font-size: 14px
+	text-align: center
+	em
+		position: absolute
+		top: 17px
+		left: 50%
+		margin-left: -10px
+		border: 2px solid #fff
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		line-height: 16px 
+		color: #fff 
+		font-style: normal 
+	span
+		position: absolute
+		bottom: 4px
+		left: 0
+		right: 0
+		text-transform: uppercase
+		color: #fff 
+	i
+		position: absolute
+		top: 25px
+		left: 8px
+		+svg(lines,26,10)
+		font-style: normal
+		&:before
+			content: "*"
+			position: absolute
+			top: -15px
+			left: 0
+			color: #fff
