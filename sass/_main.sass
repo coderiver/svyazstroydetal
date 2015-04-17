@@ -160,19 +160,37 @@
 			line-height: 60px 
 			color: #fff 
 			+ebold 
+			text-align: center
 			font-size: 36px
 			background: $red
 			box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25)
 	p
 		margin-bottom: 10px
 		strong
-			+sbold 
+			+bold 
 		sup
 			color: $red
 
-
-
-
+.list-counter_static
+	position: static
+	margin: 21px 0 0
+	text-align: left
+	&:after
+		display: none
+	li
+		position: relative
+		float: none
+		margin-bottom: 30px
+		padding-left: 75px
+		width: 100%
+		min-height: 70px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			position: absolute
+			left: 0
+			top: -21px
+			margin: 0
 
 
 

@@ -421,6 +421,12 @@ a.btn_small
 	float: right
 	+r(1600)
 		float: none
+.col-big
+	float: left
+	width: 39%
+	margin-left: 20px
+	&:first-child
+		margin-left: 0
 .order-catalog
 	position: relative
 	width: 300px
@@ -604,3 +610,18 @@ a.btn_small
 		display: inline-block
 		vertical-align: middle
 		+s(del) 
+
+.note-text
+	position: relative
+	padding: 20px 0 0 75px
+	font-size: 12px
+	+reg
+	color: $gray_d
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 75px
+		height: 1px
+		width: 230px
+		background: $border  
