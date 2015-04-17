@@ -1,0 +1,128 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title Basket
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-title Корзина
+					.table-scroll
+						table.table
+							thead
+								tr
+									th
+									th номенклатурный № / наименование
+									th.to-left Параметры
+									th.to-left система скидок
+									th Цена, без НДС
+									th Количество
+									th Стоимость, без НДС
+									th
+							tbody
+								tr.js-parent
+									td 
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Муфта МОГ-У-33-1К4845 (3 + 3 ввода)
+									td
+										p Ед. изм-я: комплект
+										p Кол-во в упаковке: 1
+									td
+										p Розничная цена (без НДС): 1651,00Р 
+										p Размер оптовой партии: от 10
+										p Оптовая цена (без НДС): 1551,94Р 
+										p Дополнительная скидка: да
+									td 
+										.price.price_small
+											.price__val 1 651,00
+												i.icon-rub
+											.price__title Розничная цена
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td 
+										.price
+											.price__val 8 255,00
+												i.icon-rub
+									td
+										button.btn-del.js-del-parent(type="button")
+								tr.js-parent
+									td 
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Муфта МОГ-У-23-1К4845 (транзит, 2 + 3 ввода)
+									td
+										p Ед. изм-я: комплект
+										p Кол-во в упаковке: 1
+									td
+										p Розничная цена (без НДС): 1651,00Р 
+										p Размер оптовой партии: от 10
+										p Оптовая цена (без НДС): 1551,94Р 
+										p Дополнительная скидка: да
+									td 
+										.price.price_small
+											.price__val 1 651,00
+												i.icon-rub
+											.price__title Розничная цена
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td 
+										.price
+											.price__val 31 038,80
+												i.icon-rub
+									td
+										button.btn-del.js-del-parent(type="button")
+						table.table.table_order
+							tbody
+								tr
+									td
+										.table__title Заказ
+									td Сумма заявки без НДС:
+									td 
+										.price.price_red
+											.price__val 39 293,80
+												i.icon-rub
+								tr
+									td
+										
+									td НДС (18%):
+									td 
+										.price.price_red
+											.price__val 7 072,90
+												i.icon-rub
+								tr
+									td
+										
+									td Сумма товара с НДС:
+									td 
+										.price.price_red
+											.price__val 46 366,70
+												i.icon-rub
+
+									
+
+
+								
+				
+			.push
+		include _footer.jade
+

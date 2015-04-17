@@ -63,6 +63,11 @@
 	+arr(10,6,#fff,t)
 =arr-b
 	+arr(10,6,#fff,b)
+=link
+	color: $red
+	+tr(color .3s)
+	&:hover
+		color: $red_d 
 $red: #ff0024
 $red_d: #bc0203
 $black: #3d3d3d
@@ -71,6 +76,7 @@ $gray: #bbb
 $gray_d: #999
 $border: #ccc
 $green: #0c0
+$light: #f7f7f7
 body
 	+font
 	color: $text

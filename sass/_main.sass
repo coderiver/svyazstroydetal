@@ -81,10 +81,10 @@
 		color: $red 
 		vertical-align: middle
 	.icon-docs-custom
-		+ .icon-rub
+		+ .icon-rub-big
 			bottom: 1px
 			left: 13px
-	.icon-rub
+	.icon-rub-big
 		position: absolute
 		bottom: 8px
 		left: 26px
@@ -124,52 +124,51 @@
 			left: 500px
 			right: 560px
 			height: 246px
-			background: url(../img/car2.jpg) 0 0 repeat-x
-	&__list
-		position: absolute
-		top: -25px
-		left: 0
-		right: 200px
-		+clr
-		text-align: center
-		font-size: 14px
-		+counter(3)
-		+r(1600)
-			position: static
-			margin-bottom: 30px
-			padding-top: 10px
-			overflow: hidden
-		li
-			float: left
-			padding: 0 4% 
-			width: 33.3%
-			+r(1800)
-				padding: 0 20px 
-			&:before
-				display: block
-				margin: 0 auto 18px
-				width: 60px
-				height: 60px
-				border-radius: 50%
-				line-height: 60px 
-				color: #fff 
-				+ebold 
-				font-size: 36px
-				background: $red
-				box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25)
-		p
-			margin-bottom: 10px
-			strong
-				+sbold 
-			sup
-				color: $red
-				 
+			background: url(../img/car2.jpg) 0 0 repeat-x		 
 	&__info
 		font-size: 11px
 		+sbold 
 		li
 			margin-bottom: 5px
 
+.list-counter
+	position: absolute
+	top: -25px
+	left: 0
+	right: 200px
+	+clr
+	text-align: center
+	font-size: 14px
+	+counter(3)
+	+r(1600)
+		position: static
+		margin-bottom: 30px
+		padding-top: 10px
+		overflow: hidden
+	li
+		float: left
+		padding: 0 4% 
+		width: 33.3%
+		+r(1800)
+			padding: 0 20px 
+		&:before
+			display: block
+			margin: 0 auto 18px
+			width: 60px
+			height: 60px
+			border-radius: 50%
+			line-height: 60px 
+			color: #fff 
+			+ebold 
+			font-size: 36px
+			background: $red
+			box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25)
+	p
+		margin-bottom: 10px
+		strong
+			+sbold 
+		sup
+			color: $red
 
 
 

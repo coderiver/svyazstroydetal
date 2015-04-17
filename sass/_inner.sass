@@ -70,7 +70,7 @@
 	padding: 0 10px 
 	width: 100%
 	height: 40px
-	background: #F7F7F7
+	background: $light
 	box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5)
 	+tr(background .2s)
 	font-size: 14px
@@ -98,7 +98,7 @@
 .progress
 	position: relative
 	height: 10px
-	background: #F7F7F7
+	background: $light
 	border-radius: 5px
 .progress-bar
 	height: 10px
@@ -159,7 +159,7 @@
 			left: 0
 			width: 20px
 			height: 20px
-			background: #F7F7F7
+			background: $light
 			box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5)
 			&:before
 				content: ""
@@ -254,10 +254,10 @@ a.btn_small
 		border: 1px solid $border  
 		+tr(background .3s)
 		&:hover
-			background: #f7f7f7 
+			background: $light 
 		&.is-active
 			color: $red 
-			background: #f7f7f7 
+			background: $light 
 		&:last-child
 			min-width: 60px
 .accord
@@ -449,3 +449,157 @@ a.btn_small
 			+tr(color .3s)
 			&:hover
 				color: $red_d 
+.table-scroll
+	width: 100%
+	overflow-x: auto 
+.table
+	margin: 0 0 20px 
+	border: 1px solid $border
+	font-size: 12px
+	width: 100%
+	+reg
+	line-height: 1.7
+	thead
+		font-size: 12px
+		text-transform: uppercase
+		+bold
+		font-weight: normal
+		color: $border
+		th
+			padding: 11px 20px
+		.to-left
+			text-align: left
+	tbody
+		tr
+			+tr(background .3s)
+			&:hover
+				background: $light 
+		td
+			padding: 18px 20px 
+			vertical-align: middle
+			border-top: 1px solid $border 
+	&__title
+		+bold
+.table_order
+	font-size: 16px
+	tbody
+		tr
+			&:hover
+				background: none
+			&:first-child
+				td
+					padding-top: 18px
+			&:last-child
+				td
+					padding-bottom: 18px
+		td
+			border: 0
+			padding: 0 20px 
+			&:first-child
+				width: 70%
+			&:last-child
+				text-align: right
+.prod-item
+	font-size: 0
+	&__img,
+	&__main	
+		display: inline-block
+		vertical-align: middle
+	&__img
+		max-width: 120px
+		padding-right: 10px
+		img
+			max-width: 100%
+	&__main
+		span
+			display: block
+			color: $border
+			font-size: 12px
+			+bold
+		a
+			+link
+			font-size: 18px
+			
+.price
+	line-height: 1
+	white-space: nowrap
+	&__val
+		font-size: 21px
+		+bold
+		color: $text
+		.icon-rub
+			margin-left: 3px
+	&__title
+		font-size: 12px
+	&_small
+		.price__val
+			+reg
+	&_red
+		.price__val
+			color: $red 
+.number
+	position: relative
+	float: left
+	border: 1px solid $border
+	font-size: 0
+	white-space: nowrap
+	&__input
+		display: inline-block
+		vertical-align: middle
+		border-left: 1px solid $border
+		border-right: 1px solid $border
+		padding: 0 5px 
+		height: 40px
+		width: 68px
+		text-align: center
+		font-size: 21px
+		background: #fff 
+		+bold
+		+font
+	&__plus,
+	&__minus
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: 40px
+		height: 40px
+		color: #fff
+		background: #fff
+		+tr(background .3s)
+		&:hover
+			background: #fdfdfd
+		&:active
+			background: $light 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -1px 0 0 -7px
+			width: 14px
+			height: 2px
+			background: $red
+	&__plus
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -7px 0 0 -1px
+			width: 2px
+			height: 14px
+			background: $red
+			
+.btn-del
+	display: inline-block
+	width: 40px
+	height: 40px
+	background: $red
+	+tr(background .3s)
+	&:hover
+		background: $red_d 
+	&:after
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+s(del) 
