@@ -8,6 +8,9 @@
 	font-size: 32px
 	+reg
 	color: $text 
+	span
+		+bold
+		color: $red 
 .page-action
 	float: right
 	width: 300px
@@ -192,6 +195,21 @@
 		background: $black
 		&:hover
 			background: #000 
+		&.is-active
+			background: $red 
+	.icon-basket
+		font-size: 25px
+		vertical-align: middle
+	&_basket
+		padding: 0 42px 
+	&_sort
+		padding: 0
+		height: 40px
+		width: 40px
+		line-height: 40px
+		text-align: center
+		i
+			vertical-align: middle
 a.btn
 	line-height: 40px
 a.btn_small
@@ -385,7 +403,19 @@ a.btn_small
 		display: block
 		padding: 14px 30px 14px 60px
 		color: #fff 
-
+.tabs_small
+	.tabs__item
+		margin: 0
+		font-size: 14px
+		text-transform: none
+		width: auto
+		&:before
+			display: none
+	.tabs__link
+		padding: 0 65px
+		text-align: center
+		height: 40px
+		line-height: 40px
 .file-wrap
 	float: left
 	width: 300px
@@ -470,6 +500,10 @@ a.btn_small
 	width: 100%
 	+reg
 	line-height: 1.7
+	&_center
+		text-align: center
+		.prod-item
+			text-align: left
 	thead
 		font-size: 12px
 		text-transform: uppercase
@@ -488,9 +522,14 @@ a.btn_small
 		td
 			padding: 18px 20px 
 			vertical-align: middle
-			border-top: 1px solid $border 
+			border-top: 1px solid $border
+			strong
+				text-transform: uppercase 
 	&__title
 		+bold
+	.icon-camera
+		font-size: 40px
+		color: $border 
 .table_order
 	font-size: 16px
 	white-space: nowrap
@@ -531,6 +570,14 @@ a.btn_small
 		a
 			+link
 			font-size: 18px
+			span
+				display: inline
+				padding: 0 3px 
+				margin-right: 4px
+				+reg
+				font-size: 18px
+				background: $red
+				color: #fff  
 			
 .price
 	line-height: 1
@@ -551,7 +598,7 @@ a.btn_small
 			color: $red 
 .number
 	position: relative
-	float: left
+	display: inline-block
 	border: 1px solid $border
 	font-size: 0
 	white-space: nowrap
@@ -651,3 +698,74 @@ a.btn_small
 	td 
 		padding: 10px 0 
 		border-bottom: 1px solid $border
+		
+.toolbar
+	display: table
+	width: 100%
+	margin: 0 0 20px 
+	height: 40px
+	table-layout: fixed
+	&__left
+		width: 370px
+		.tabs
+			margin: 0
+			&__link
+				width: 185px
+				padding: 0
+	&__left,
+	&__center,
+	&__right
+		display: table-cell
+		vertical-align: middle
+	&__center
+		border: 1px solid $border
+	&__right
+		text-align: right
+		width: 80px
+.sort-box
+	text-align: right
+	font-size: 0
+	white-space: nowrap
+	&__title
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		font-size: 12px
+		text-transform: uppercase
+		+bold
+		color: $gray 
+.sort
+	display: inline-block
+	vertical-align: middle
+	margin-right: -1px
+	min-width: 97px
+	text-align: left
+	border-left: 1px solid $border
+	border-right: 1px solid $border
+	&:hover,
+	&.is-active
+		.sort__main
+			color: $red 
+	&__main
+		cursor: pointer
+		height: 38px
+		line-height: 38px
+		padding: 0 20px
+		font-size: 14px
+		color: $black
+		+bold 
+		+tr(color .3s)
+		span
+			display: inline-block
+			position: relative
+			&:after,
+			&:before
+				content: ""
+				position: absolute
+				right: -20px
+			&:before
+				top: 13px
+				+arr(10,5,$gray_d,t)
+			&:after
+				bottom: 13px
+				+arr(10,5,$gray_d,b)

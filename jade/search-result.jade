@@ -1,0 +1,174 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title Search result
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-title Результаты поиска: 
+							span Кассеты
+					.toolbar
+						.toolbar__left
+							ul.tabs.tabs_small
+								li.tabs__item.is-active
+									a(href="#").tabs__link 
+										| Товары
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Статьи
+						.toolbar__center
+							.sort-box
+								.sort-box__title Сортировать по:
+								.sort
+									.sort__main 
+										span Цене
+								.sort
+									.sort__main 
+										span Дате
+						.toolbar__right
+							a.btn.btn_dark.btn_sort.is-active(href="#")
+								i.icon-view-list
+							a.btn.btn_dark.btn_sort(href="#")
+								i.icon-view-grid
+					.table-scroll
+						table.table.table_center
+							thead
+								tr
+									th
+									th номенклатурный № / наименование
+									th поставка
+									th розница, без ндс
+									th Опт, без ндс
+									th Заказать
+									th
+							tbody
+								tr
+									td
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Комплект 
+													span кассеты
+													| К24-4525 (стяжки, маркеры, КДЗС 30 шт.)
+									td 
+										strong На складе
+									td
+										.price
+											.price__val 195,00
+												i.icon-rub
+									td 
+										.price.price_small
+											.price__val 183,30
+												i.icon-rub
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td
+										a.btn.btn_basket(href="#") 
+											i.icon-basket
+								tr
+									td
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Комплект 
+													span кассеты
+													| К24-4525 (стяжки, маркеры, КДЗС 30 шт.)
+									td 
+										strong На складе
+									td
+										.price
+											.price__val 195,00
+												i.icon-rub
+									td 
+										.price.price_small
+											.price__val 183,30
+												i.icon-rub
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td
+										a.btn.btn_basket(href="#") 
+											i.icon-basket
+								tr
+									td
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Комплект 
+													span кассеты
+													| К24-4525 (стяжки, маркеры, КДЗС 30 шт.)
+									td 
+										strong На складе
+									td
+										.price
+											.price__val 195,00
+												i.icon-rub
+									td 
+										.price.price_small
+											.price__val 183,30
+												i.icon-rub
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td
+										a.btn.btn_basket(href="#") 
+											i.icon-basket
+								tr
+									td
+										a(href="#")
+											i.icon-camera
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Комплект 
+													span кассеты
+													| К24-4525 (стяжки, маркеры, КДЗС 30 шт.)
+									td 
+										strong На складе
+									td
+										.price
+											.price__val 195,00
+												i.icon-rub
+									td 
+										.price.price_small
+											.price__val 183,30
+												i.icon-rub
+									td
+										.number.js-number(data-max-number="100")
+											button.number__minus.js-minus-number(type="button")
+											input.number__input(value="5")
+											button.number__plus.js-plus-number(type="button")
+									td
+										a.btn.btn_basket(href="#") 
+											i.icon-basket
+									
+
+
+								
+				
+			.push
+		include _footer.jade
+
