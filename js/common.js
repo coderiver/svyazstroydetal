@@ -133,13 +133,13 @@ head.ready(function() {
 	function number() { 
         var number = $(".js-number");
         number.each(function(){
-            var max_number = +($(this).attr("data-max-number"));
+            var maxNumber = +($(this).attr("data-max-number"));
             var input = $(this).find("input");
             var plus = $(this).find(".js-plus-number");
             var minus = $(this).find(".js-minus-number");
             plus.on("click", function(){
                 var val = +(input.val());
-                if (val >= max_number) {
+                if (val >= maxNumber) {
                     return false
                 }
                 else {
@@ -157,19 +157,29 @@ head.ready(function() {
                     return false;
                 }
             });
-            input.on("change", function(){
+            input.on('keyup', function(){
+		        var value = $(this).val();
+		        var re = /[^0-9,]/;
+		        if (re.test(value)) {
+			        value = value.replace(re, '');
+			        $(this).val(value);
+			    }
+		    });
+		    input.on("change", function(){
                 var val = +$(this).val();
-                if (val > max_number) {
-                    val = max_number;
+                if (val > maxNumber) {
+                    val = maxNumber;
                     $(this).val(val);
                 }
-                else {
-                    return false;
+                if (val == '') {
+                    val = 1;
+                    $(this).val(val);
                 }
             });
         });
     }
     number();
+
 
 	$(".js-del-parent").on("click", function(){
         $(this).closest(".js-parent").remove();
