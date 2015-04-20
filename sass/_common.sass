@@ -253,6 +253,7 @@ a
 			
 .main
 	margin: 0 auto 
+	position: relative
 	padding: 0 20px
 	max-width: 1920px
 	&__sidebar
@@ -264,6 +265,12 @@ a
 		position: relative
 		padding: 20px 0 20px 20px 
 		overflow: hidden
+	&__img
+		position: absolute
+		top: 145px
+		right: 0
+		+r(1600)
+			display: none
 .tabs-content
 	display: none		
 

@@ -425,8 +425,13 @@ a.btn_small
 	float: left
 	width: 39%
 	margin-left: 20px
+	+r(1600)
+		width: 49%
+		margin-left: 2%
 	&:first-child
 		margin-left: 0
+		+r(1600)
+			margin-left: 0
 .order-catalog
 	position: relative
 	width: 300px
@@ -625,3 +630,24 @@ a.btn_small
 		height: 1px
 		width: 230px
 		background: $border  
+
+.table-title
+	margin: 0 0 20px 
+	font-size: 18px
+	color: $black 
+.table-info
+	width: 100%
+	color: $black 
+	&_small
+		width: 74%
+		+r(1600)
+			width: 100%
+	th
+		border-bottom: 1px solid $red
+		padding: 10px 0 
+		font-size: 14px
+		+bold
+		text-align: left
+	td 
+		padding: 10px 0 
+		border-bottom: 1px solid $border
