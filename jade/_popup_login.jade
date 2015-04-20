@@ -1,0 +1,31 @@
+.popup.js-popup.js-popup-login
+	.popup__head Авторизация на сайте
+	.popup__body
+		.popup__inner
+			form.js-validate
+				label.field
+					span.field__title Адрес электронной почты  
+						sup *
+					span.field__body
+						input.input(type="email", tabindex="1", name="email", required)
+						i.icon-check
+				label.field
+					span.field__title Пароль 
+						sup *
+					span.field__body
+						input.input(type="password", tabindex="1", name="password", required)
+						i.icon-check
+				label.checkbox
+					input(type="checkbox", name="checkbox")
+					span
+						i
+						| Запомнить меня на сайте
+				button.btn.btn_width(type="submit") Войти
+			a.link(href="#") Забыли пароль?
+	.popup__footer
+		.popup__inner
+			p Если вы впервые на сайте, заполните, пожалуйста, 
+				a(href="#") регистрационную форму
+				| .
+	button.popup__close.js-close-popup(type="button")
+.overlay.js-overlay

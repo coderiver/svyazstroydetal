@@ -15,7 +15,7 @@
           <div class="l-center"><a href="#" class="header__logo"></a>
             <ul class="header__list header__nav">
               <li><a href="#"><i class="i-logo"></i>О компании</a></li>
-              <li><a href="#"><i class="i-login"></i>Авторизация</a></li>
+              <li><a href="js-popup-login" class="js-toggle-popup"><i class="i-login"></i>Авторизация</a></li>
               <li><a href="#"><i class="i-cart"></i>Пока ничего не заказано</a></li>
             </ul>
             <ul class="header__list header__info">
@@ -131,6 +131,30 @@
       </div>
       <div class="push"></div>
     </div>
+    <div class="popup js-popup js-popup-login">
+      <div class="popup__head">Авторизация на сайте</div>
+      <div class="popup__body">
+        <div class="popup__inner">
+          <form class="js-validate">
+            <label class="field"><span class="field__title">Адрес электронной почты  <sup>*</sup></span><span class="field__body">
+                <input type="email" tabindex="1" name="email" required class="input"><i class="icon-check"></i></span></label>
+            <label class="field"><span class="field__title">Пароль <sup>*</sup></span><span class="field__body">
+                <input type="password" tabindex="1" name="password" required class="input"><i class="icon-check"></i></span></label>
+            <label class="checkbox">
+              <input type="checkbox" name="checkbox"><span><i></i>Запомнить меня на сайте</span>
+            </label>
+            <button type="submit" class="btn btn_width">Войти</button>
+          </form><a href="#" class="link">Забыли пароль?</a>
+        </div>
+      </div>
+      <div class="popup__footer">
+        <div class="popup__inner">
+          <p>Если вы впервые на сайте, заполните, пожалуйста, <a href="#">регистрационную форму</a>.</p>
+        </div>
+      </div>
+      <button type="button" class="popup__close js-close-popup"></button>
+    </div>
+    <div class="overlay js-overlay"></div>
     <div class="footer">
       <div class="l-center">
         <div class="footer__meta">Copyright 2007 ЗАО "Связьстройдеталь" </div>
