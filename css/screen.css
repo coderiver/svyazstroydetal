@@ -29,6 +29,10 @@ body { font-family: "Open Sans", sans-serif; color: #333; font-weight: 400; font
 
 a { text-decoration: none; }
 
+.link { color: #ff0024; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; text-decoration: underline; }
+.link:hover { color: #bc0203; }
+.link:hover { text-decoration: none; }
+
 .l-center { position: relative; margin: 0 auto; padding: 0 20px; max-width: 1920px; *zoom: 1; }
 .l-center:after { content: " "; display: table; clear: both; }
 
@@ -450,6 +454,9 @@ you can use the generic selector below, but it's slower:
 
 .icon-docs-custom { display: inline-block; background: url('../img/icons-scfec685771.png') 0 -403px no-repeat; width: 71px; height: 88px; }
 
+.icon-rub { background: url("../img/svg/rub.svg") no-repeat 0 0; -moz-background-size: 13px 15px; -o-background-size: 13px 15px; -webkit-background-size: 13px 15px; background-size: 13px 15px; width: 13px; height: 15px; display: inline-block; }
+.ie8 .icon-rub { display: inline-block; background: url('../img/icons-scfec685771.png') 0 -924px no-repeat; width: 13px; height: 15px; }
+
 .icon-rub-big { display: inline-block; background: url('../img/icons-scfec685771.png') 0 -838px no-repeat; width: 26px; height: 30px; }
 
 .icon-rub-s { display: inline-block; background: url('../img/icons-scfec685771.png') 0 -904px no-repeat; width: 9px; height: 10px; }
@@ -531,7 +538,10 @@ you can use the generic selector below, but it's slower:
 .col { float: left; padding: 0 10px; }
 .col_1 { width: 20%; }
 .col_14 { width: 25%; }
+.col_12 { width: 50%; }
+.col_13 { width: 33.3%; }
 .col_2 { width: 40%; }
+.col_23 { width: 66.6%; }
 .col_3 { width: 60%; }
 .col_4 { width: 80%; }
 .col_5 { width: 100%; }
@@ -548,11 +558,15 @@ you can use the generic selector below, but it's slower:
 
 .box { border: 1px solid #ccc; }
 .box__in { padding: 27px 40px 40px; }
+.box_small .box__in { padding: 20px; }
+.box_mb { margin-bottom: 20px; }
 
 .form { overflow: hidden; }
 .form__col { float: left; margin-left: 20px; width: 39%; }
 .form__col:first-child { margin-left: 0; }
 @media only screen and (max-width: 1600px) { .form__col { width: 49%; margin-left: 2%; } }
+
+.field-title { margin-bottom: 20px; font-size: 16px; font-weight: 700; color: #3d3d3d; }
 
 .field { display: block; margin-bottom: 30px; }
 .field + .progress-wrap { margin: -5px 0 52px; }
@@ -562,7 +576,11 @@ you can use the generic selector below, but it's slower:
 .field__body .icon-check { position: absolute; right: 10px; top: 10px; font-size: 20px; color: #0c0; display: none; pointer-events: none; }
 .field__body label.has-error { display: none !important; }
 
+.field_single { margin-bottom: 0; }
+
 .input { display: block; padding: 0 10px; width: 100%; height: 40px; background: #f7f7f7; box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5); -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; font-size: 14px; font-family: "Open Sans", sans-serif; font-weight: 400; color: #333; }
+.input_textarea { padding: 10px; height: 160px; resize: none; box-shadow: none; border: 1px solid #ccc; }
+.input_textarea + .file-include { margin-top: -1px; }
 .input:focus { background: #fff; }
 .input.has-error { box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5), inset 0 0 0 1px #ff0024; }
 .input.is-success { box-shadow: inset 0 0 0 1px #0c0; background: #fff; }
@@ -593,6 +611,17 @@ you can use the generic selector below, but it's slower:
 .checkbox span { display: block; position: relative; padding-left: 30px; }
 .checkbox span i { position: absolute; top: 0; left: 0; width: 20px; height: 20px; background: #f7f7f7; box-shadow: inset 0 0 3px rgba(1, 1, 1, 0.5); }
 .checkbox span i:before { content: ""; position: absolute; top: 4px; left: 3px; display: inline-block; background: url('../img/icons-scfec685771.png') 0 -194px no-repeat; width: 15px; height: 12px; display: none; }
+
+.checkbox-group { margin: 30px 0; }
+
+.checkbox_simple { display: block; cursor: default; }
+.checkbox_simple span i { background: none; box-shadow: none; }
+.checkbox_simple span i:before { display: block; }
+.checkbox_simple.is-inactive span { color: #999; }
+.checkbox_simple.is-inactive span i:before { display: none; }
+
+.btn-wrap { text-align: right; }
+.btn-wrap .btn { min-width: 300px; text-align: center; }
 
 .btn { display: inline-block; padding: 0 52px; height: 40px; background: #ff0024; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; font-size: 14px; font-family: "Open Sans", sans-serif; font-weight: 700; color: #fff; }
 .btn:hover { background: #bc0203; }
@@ -718,6 +747,11 @@ a.btn_small { padding: 0 33px; line-height: 38px; }
 .table_order tbody td { border: 0; padding: 0 80px 0 20px; }
 .table_order tbody td:first-child { width: 70%; }
 .table_order tbody td:last-child { text-align: right; }
+
+.table_layout-fixed { table-layout: fixed; }
+.table_layout-fixed tbody td { padding: 0 20px; width: auto !important; }
+.table_layout-fixed.table_order { min-width: 500px; }
+.table_layout-fixed.table_order tbody td:first-child { width: 120px !important; }
 
 .prod-item { font-size: 0; }
 .prod-item__img, .prod-item__main { display: inline-block; vertical-align: middle; }
@@ -852,6 +886,25 @@ a.btn_small { padding: 0 33px; line-height: 38px; }
 .contact { font-size: 14px; margin-bottom: 20px; }
 .contact a { color: #ff0024; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .contact a:hover { color: #bc0203; }
+
+.file-include { position: relative; display: block; background: #fff; border: 1px solid #ccc; height: 40px; line-height: 40px; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; cursor: pointer; }
+.file-include:hover { background: #fdfdfd; }
+.file-include .icon-doc { position: absolute; left: 9px; top: 11px; color: #3d3d3d; font-size: 14px; }
+.file-include span { display: inline-block; padding-left: 30px; color: #ff0024; }
+
+.radio-wrap { margin-bottom: 20px; }
+
+.radio { position: relative; display: inline-block; font-size: 14px; font-weight: 400; cursor: pointer; }
+.radio + .btn { margin-top: 22px; }
+.radio input { position: absolute; z-index: 2; opacity: 0; }
+.radio input:checked + span { font-weight: 700; }
+.radio input:checked + span i:before { display: block; }
+.radio span { display: block; position: relative; padding-left: 30px; }
+.radio span i { position: absolute; top: 0; left: 0; width: 20px; height: 20px; background: #fff; border: 1px solid #ccc; border-radius: 50%; }
+.radio span i:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -5px; width: 10px; height: 10px; background: #ff0024; border-radius: 50%; display: none; }
+
+.total { border-top: 1px solid #ccc; padding-top: 10px; text-align: right; font-size: 16px; color: #3d3d3d; }
+.total__title, .total .price { display: inline-block; vertical-align: middle; }
 
 .nav { counter-reset: list1; }
 .nav > li { margin-bottom: 1px; position: relative; min-height: 90px; background: #3d3d3d; font-weight: 700; color: #fff; text-align: center; font-size: 0; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }

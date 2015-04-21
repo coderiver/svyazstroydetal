@@ -1,0 +1,212 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title order
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-action
+							a.btn.btn_width(href="#") Заказать
+						.page-title Оформление заявки
+					.table-scroll
+						table.table.table_center
+							thead
+								tr
+									th
+									th номенклатурный № / наименование
+									th Цена, без НДС
+									th Скидка
+									th Количество
+									th Стоимость, без НДС
+							tbody
+								tr.js-parent
+									td 
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Муфта МОГ-У-33-1К4845 (3 + 3 ввода)
+									td 
+										.price.price_small
+											.price__val 1 651,00
+												i.icon-rub
+											.price__title Розничная цена
+									td
+										.price.price_small
+											.price__val 0%
+									td
+										.price
+											.price__val 5
+									td 
+										.price
+											.price__val 8 255,00
+												i.icon-rub
+								tr.js-parent
+									td 
+										a(href="#")
+											img(src="img/prod-item.png", alt="img")
+									td 
+										.prod-item
+											.prod-item__main
+												span 130101-00020
+												a(href="#") Муфта МОГ-У-23-1К4845 (транзит, 2 + 3 ввода)
+									td 
+										.price.price_small
+											.price__val 1 651,00
+												i.icon-rub
+											.price__title Розничная цена
+									td
+										.price.price_small
+											.price__val 5%
+									td
+										.price
+											.price__val 5
+									td 
+										.price
+											.price__val 31 038,80
+												i.icon-rub
+					.row
+						.col.col_3
+							.box.box_small
+								.box__in
+									.row
+										.col.col_12
+											.field-title Доставка
+											.radio-wrap
+												label.radio
+													input(type="radio", name="delivery", checked)
+													span 
+														i
+														| Самовывоз
+											.radio-wrap
+												label.radio
+													input(type="radio", name="delivery")
+													span 
+														i
+														| Бесплатная доставка
+											.checkbox-group
+												.checkbox.checkbox_simple
+													span 
+														i
+														| При заказе от 50 000 руб. в пределах МКАД	
+												.checkbox.checkbox_simple.is-inactive
+													span 
+														i
+														| При заказе от 50 000 руб. в пределах МКАД	
+												.checkbox.checkbox_simple.is-inactive
+													span 
+														i
+														| При заказе от 50 000 руб. в пределах МКАД	
+											.radio-wrap
+												label.radio
+													input(type="radio", name="delivery")
+													span 
+														i
+														| Платная доставка
+											a.link(href="#") Все условия доставки
+										.col.col_12
+											.field-title Адрес доставки
+											.row
+												.col.col_23
+													label.field
+														span.field__title Город 
+															sup *
+														span.field__body
+															input.input(type="text")
+												.col.col_13
+													label.field
+														span.field__title Индекс
+														span.field__body
+															input.input(type="text")
+											.row
+												.col.col_23
+													label.field
+														span.field__title Улица
+														span.field__body
+															input.input(type="text")
+												.col.col_13
+													label.field
+														span.field__title Дом
+														span.field__body
+															input.input(type="text")
+											.row
+												.col.col_13
+													label.field
+														span.field__title Корпус
+														span.field__body
+															input.input(type="text")
+												.col.col_13
+													label.field
+														span.field__title Строение
+														span.field__body
+															input.input(type="text")
+												.col.col_13
+													label.field
+														span.field__title Офис/Квартира
+														span.field__body
+															input.input(type="text")
+									.total
+										span.total__title Расчетная стоимость доставки:
+										.price
+											.price__val 0,00
+												i.icon-rub
+						.col.col_2
+							.box.box_small.box_mb
+								.box__in
+									.field-title Комментарий
+									.field.field_single
+										.field__body
+											textarea.input.input_textarea
+											label.file-include.js-file-include
+												i.icon-doc
+												span Прикрепить файл
+												input(type="file", hidden)
+							.table-scroll
+								table.table.table_order.table_layout-fixed
+									tbody
+										tr
+											td
+												.table__title Заказ
+											td Сумма заявки без НДС:
+											td 
+												.price.price_red
+													.price__val 39 293,80
+														i.icon-rub
+										tr
+											td
+												
+											td НДС (18%):
+											td 
+												.price.price_red
+													.price__val 7 072,90
+														i.icon-rub
+										tr
+											td
+												
+											td Сумма товара с НДС:
+											td 
+												.price.price_red
+													.price__val 46 366,70
+														i.icon-rub
+							.btn-wrap
+								button.btn(type="submit") Заказать
+
+
+					
+
+									
+
+
+								
+				
+			.push
+		include _footer.jade
+
