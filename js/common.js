@@ -205,4 +205,10 @@ head.ready(function() {
 		return false;
 	});
 
+	$(".js-select select").on("change", function(){
+		var text = $(this).val();
+		$(this).parents(".js-select").find(".js-select-text").text(text);
+		return false;
+	});
+
 });
