@@ -412,6 +412,17 @@ a.btn_small
 		text-align: center
 		height: 40px
 		line-height: 40px
+.tabs_table
+	display: table
+	margin: 0 0 20px
+	table-layout: fixed
+	width: 100%
+	.tabs__item
+		display: table-cell
+		vertical-align: middle
+		width: auto
+	.tabs__link
+		padding: 0
 .file-wrap
 	float: left
 	width: 300px
@@ -880,7 +891,71 @@ a.btn_small
 	&__left
 		float: left
 		padding-right: 20px
-		width: 61%
+		width: 60%
 	&__right
 		overflow: hidden
+		
+.contacts
+	+clr
+	border-bottom: 1px solid $border 
+	padding-bottom: 20px
+	&__map
+		float: left
+		width: 60%
+	&__info
+		overflow: hidden
+		padding-left: 20px
+		
+.map
+	&__in
+		height: 620px
+	.gm-style-iw
+		div
+			overflow: visible !important
+		+ div
+			display: none
+.map-window
+	color: $black
+	font-size: 14px
+	&__head
+		background: $light
+		padding: 22px 20px
+		margin: -8px -37px 0 -14px
+		strong
+			display: block
+			+bold
+	&__body
+		margin: -8px -37px 0 -14px
+		padding: 22px 20px 12px
+		a
+			+link
+
+.address
+	border-bottom: 1px solid $border 
+	padding-bottom: 10px
+	color: $black 
+	&__title
+		margin-bottom: 24px
+		font-size: 20px
+		+reg
+	&__text
+		margin-bottom: 7px
+		font-size: 16px
+		line-height: 1.25
+	&__info
+		font-size: 14px
+		li
+			display: inline-block
+			margin-left: 17px
+			vertical-align: middle
+			&:first-child
+				margin-left: 0
+		a
+			+link
+			i
+				display: inline-block
+				margin-right: 4px
+				font-size: 20px
+				vertical-align: middle
+				color: $black 
 		

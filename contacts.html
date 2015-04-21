@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200">
+    <link rel="stylesheet" href="css/screen.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <title>delivery</title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  </head>
+  <body>
+    <div class="out">
+      <header class="header">
+        <div class="header__top">
+          <div class="l-center"><a href="#" class="header__logo"></a>
+            <ul class="header__list header__nav">
+              <li><a href="#"><i class="i-logo"></i>О компании</a></li>
+              <li><a href="#"><i class="i-login"></i>Александр</a></li>
+              <li><a href="#"><i class="i-cart"></i>Пока ничего не заказано</a></li>
+            </ul>
+            <ul class="header__list header__info">
+              <li class="header__tel"><a href="tel:+7 (495) 786-34-34">+7 (495) 786-34-34</a></li>
+              <li><a href="#"><i class="icon-clock"></i>Режим работы</a></li>
+              <li><a href="#"><i class="i-pin"></i>Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__main">
+          <div class="l-center"><a href="#" class="header__catalog"> <i class="icon-notebook"></i>Каталог продукции</a>
+            <div class="header__search">
+              <div class="search">
+                <div class="search__input">
+                  <input type="text" placeholder="Поиск">
+                </div>
+                <div class="search__btn">
+                  <button type="submit">Найти</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="main__sidebar">
+          <ol class="nav js-accord-group">
+            <li class="is-open js-accord"><a href="#" class="js-accord-toggle">Линейные и стационарные сооружения связи</a>
+              <ol style="display:block" class="js-accord-list">
+                <li><a href="#">Муфты для оптических кабелей</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (станционная сторона)</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (сторона абонента)</a></li>
+                <li><a href="#">Оборудование для ВОЛС специального назначения</a></li>
+                <li><a href="#">Приборы, инструменты для работы с ОК</a></li>
+                <li><a href="#">Арматура для подвески оптических кабелей</a></li>
+                <li><a href="#">Оптические кабели связи</a></li>
+              </ol>
+            </li>
+            <li class="js-accord"><a href="#" class="js-accord-toggle">Монтаж и измерения электрических кабелей связи</a>
+              <ol class="js-accord-list">
+                <li><a href="#">Муфты для оптических кабелей</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (станционная сторона)</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (сторона абонента)</a></li>
+                <li><a href="#">Оборудование для ВОЛС специального назначения</a></li>
+                <li><a href="#">Приборы, инструменты для работы с ОК</a></li>
+                <li><a href="#">Арматура для подвески оптических кабелей</a></li>
+                <li><a href="#">Оптические кабели связи</a></li>
+              </ol>
+            </li>
+            <li class="js-accord"><a href="#" class="js-accord-toggle">Монтаж и измерения оптических кабелей связи</a>
+              <ol class="js-accord-list">
+                <li><a href="#">Муфты для оптических кабелей</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (станционная сторона)</a></li>
+                <li><a href="#">Продукты и решения для ВОЛС (сторона абонента)</a></li>
+                <li><a href="#">Оборудование для ВОЛС специального назначения</a></li>
+                <li><a href="#">Приборы, инструменты для работы с ОК</a></li>
+                <li><a href="#">Арматура для подвески оптических кабелей</a></li>
+                <li><a href="#">Оптические кабели связи</a></li>
+              </ol>
+            </li>
+          </ol><a href="#" class="promo-link"><span><i class="icon-set"></i></span>Техническая помощь</a><a href="#" class="promo-link"><span><i class="icon-pricelist"></i></span>Прайс-лист</a><a href="#" class="promo-link"><span><i class="icon-delivery"></i></span>Доставка</a>
+        </div>
+        <div class="main__content">
+          <div class="page-head">
+            <div class="page-title">Контакты</div>
+          </div>
+          <div class="contacts">
+            <div class="contacts__map">
+              <ul class="tabs tabs_small tabs_table">
+                <li class="tabs__item is-active"><a href="#" class="tabs__link">
+                     
+                    Москва</a></li>
+                <li class="tabs__item"><a href="#" class="tabs__link">
+                     
+                    Санкт-петербург</a></li>
+                <li class="tabs__item"><a href="#" class="tabs__link">
+                     
+                    Новосибирск</a></li>
+                <li class="tabs__item"><a href="#" class="tabs__link">
+                     
+                    Екатеринбург</a></li>
+                <li class="tabs__item"><a href="#" class="tabs__link">
+                     
+                    Нижний Новгород</a></li>
+                <li class="tabs__item"><a href="#" class="tabs__link">
+                     
+                    Краснодар</a></li>
+              </ul>
+              <div class="map">
+                <div id="map" class="map__in"></div>
+                <script>
+                  (function(){
+                  	var map;
+                  	function initialize() {
+                  		// Create an array of styles.
+                  		
+                  		var mapOptions = {
+                  			zoom: 16,
+                  			scrollwheel: true,
+                  			center: new google.maps.LatLng(55.708372, 37.691622),
+                  			mapTypeControl: false,
+                  			zoomControl: true,
+                  		    zoomControlOptions: {
+                  		      style: google.maps.ZoomControlStyle.SMALL
+                  		    }
+                  		};
+                  		map = new google.maps.Map(document.getElementById('map'),mapOptions);
+                  		var image = new google.maps.MarkerImage('img/marker.png');
+                  		var myLatLng = new google.maps.LatLng(55.708372, 37.691622);
+                  		var marker = new google.maps.Marker({
+                  			position: myLatLng,
+                  			map: map,
+                  			title: 'ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ»', 
+                  			icon: image,
+                  			id: 'marker1'
+                  		});
+                  	    var contentString =	'<div class="map-window">'
+                  				+'<div class="map-window__head"><strong>ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ»</strong>115088, г. Москва, ул. Южнопортовая, 7а.</div>'
+                  				+'<div class="map-window__body">'
+                  				+'<p>+7 (495) 786-34-34 (многоканальный) </p>'
+                  				+'<p>+7 (495) 786-34-32 (факс) </p>'
+                  				+'<p><a href="mailto:mail@ssd.ru">mail@ssd.ru</a></p>'
+                  				+'</div>'+
+                  			'</div>';
+                  	  	var infowindow = new google.maps.InfoWindow({
+                  		    content: contentString
+                  		});
+                  		infowindow.open(map,marker);
+                  	}
+                  	google.maps.event.addDomListener(window, 'load', initialize);
+                  })();
+                  
+                </script>
+              </div>
+            </div>
+            <div class="contacts__info">
+              <div class="address">
+                <div class="address__title">Москва</div>
+                <div class="address__text">
+                   
+                  ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ» 115088, <br>г. Москва, ул. Южнопортовая, 7а.
+                </div>
+                <ul class="address__info">
+                  <li><a href="#"> <i class="icon-clock"></i>Режим работы</a></li>
+                  <li><a href="#"><i class="icon-compass"></i>Режим работы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+    <div class="footer">
+      <div class="l-center">
+        <div class="footer__meta">Copyright 2007 ЗАО "Связьстройдеталь" </div>
+        <div class="footer__info">
+           
+          Разработка сайта <a href="#">— <span>qb-interactive</span><i class="qb-logo"></i></a>
+        </div>
+      </div>
+    </div>
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

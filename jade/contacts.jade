@@ -1,0 +1,99 @@
+doctype
+html
+
+	head
+		include _head.jade
+		title delivery
+		script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+	body
+		.out
+			include _header.jade
+			.main
+				include _sidebar.jade	
+				.main__content
+					.page-head
+						.page-title Контакты
+					.contacts
+						.contacts__map
+							ul.tabs.tabs_small.tabs_table
+								li.tabs__item.is-active
+									a(href="#").tabs__link 
+										| Москва
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Санкт-петербург
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Новосибирск
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Екатеринбург
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Нижний Новгород
+								li.tabs__item
+									a(href="#").tabs__link 
+										| Краснодар
+							.map
+								.map__in(id="map")
+								script.
+									(function(){
+										var map;
+										function initialize() {
+											// Create an array of styles.
+											
+											var mapOptions = {
+												zoom: 16,
+												scrollwheel: true,
+												center: new google.maps.LatLng(55.708372, 37.691622),
+												mapTypeControl: false,
+												zoomControl: true,
+											    zoomControlOptions: {
+											      style: google.maps.ZoomControlStyle.SMALL
+											    }
+											};
+											map = new google.maps.Map(document.getElementById('map'),mapOptions);
+											var image = new google.maps.MarkerImage('img/marker.png');
+											var myLatLng = new google.maps.LatLng(55.708372, 37.691622);
+											var marker = new google.maps.Marker({
+												position: myLatLng,
+												map: map,
+												title: 'ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ»', 
+												icon: image,
+												id: 'marker1'
+											});
+										    var contentString =	'<div class="map-window">'
+													+'<div class="map-window__head"><strong>ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ»</strong>115088, г. Москва, ул. Южнопортовая, 7а.</div>'
+													+'<div class="map-window__body">'
+													+'<p>+7 (495) 786-34-34 (многоканальный) </p>'
+													+'<p>+7 (495) 786-34-32 (факс) </p>'
+													+'<p><a href="mailto:mail@ssd.ru">mail@ssd.ru</a></p>'
+													+'</div>'+
+												'</div>';
+										  	var infowindow = new google.maps.InfoWindow({
+											    content: contentString
+											});
+											infowindow.open(map,marker);
+										}
+										google.maps.event.addDomListener(window, 'load', initialize);
+									})();
+							
+						.contacts__info
+							.address
+								.address__title Москва
+								.address__text 
+									| ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ» 115088, 
+									br
+									| г. Москва, ул. Южнопортовая, 7а.
+								ul.address__info
+									li
+										a(href="#") 
+											i.icon-clock
+											| Режим работы
+									li
+										a(href="#")
+											i.icon-compass
+											| Режим работы
+
+			.push
+		include _footer.jade
