@@ -20,7 +20,7 @@
             </ul>
             <ul class="header__list header__info">
               <li class="header__tel"><a href="tel:+7 (495) 786-34-34">+7 (495) 786-34-34</a></li>
-              <li><a href="#"><i class="icon-clock"></i>Режим работы</a></li>
+              <li><a href="js-popup-work" class="js-toggle-popup"><i class="icon-clock"></i>Режим работы</a></li>
               <li><a href="#"><i class="i-pin"></i>Контакты</a></li>
             </ul>
           </div>
@@ -149,12 +149,89 @@
       </div>
       <div class="popup__footer">
         <div class="popup__inner">
-          <p>Если вы впервые на сайте, заполните, пожалуйста, <a href="#">регистрационную форму</a>.</p>
+          <p>Если вы впервые на сайте, заполните, пожалуйста, <a href="#" class="link">регистрационную форму</a>.</p>
         </div>
       </div>
       <button type="button" class="popup__close js-close-popup"></button>
     </div>
-    <div class="overlay js-overlay"></div>
+    <div class="popup popup_width js-popup js-popup-work">
+      <div class="popup__head">Режим работы</div>
+      <div class="popup__body">
+        <div class="popup__inner">
+          <div class="popup__row">
+            <div class="row">
+              <div class="col col_12">
+                <div class="address address_no-border">
+                  <div class="address__title">Москва</div>
+                  <div class="address__text">
+                     
+                    ЗАО «СВЯЗЬСТРОЙДЕТАЛЬ» 115088, <br>г. Москва, ул. Южнопортовая, 7а.
+                  </div>
+                </div>
+              </div>
+              <div class="col col_12"><a href="#" class="btn">Филиалы</a></div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="row">
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>ООО «Прогресс»</strong></li>
+                  <li>+7 (495) 783-18-78</li>
+                  <li> <a href="#">www.progress-msk.ru</a></li>
+                  <li> <a href="#">progressmsk@yandex.ru</a></li>
+                </ul>
+              </div>
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>Режим работы отдела продаж</strong></li>
+                  <li>понедельник – пятница: с 7.00 до 18.00 </li>
+                  <li> <strong>Режим работы склада готовой продукции </strong></li>
+                  <li>понедельник – пятница: с 7:00 до 20:30 </li>
+                  <li> <strong>Режим работы склада ЖБИ </strong></li>
+                  <li>понедельник – пятница: с 7:00 до 23:00 </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="row">
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>Учебный центр</strong></li>
+                  <li>+7 (495) 786-34-42   </li>
+                  <li> <a href="#">volkova@ssd.ru</a>, <a href="#">potapov@ssd.ru</a></li>
+                </ul>
+              </div>
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>Режим работы</strong></li>
+                  <li>понедельник – пятница: с 8.00 до 17.00 </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="row">
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>Секретариат</strong></li>
+                  <li>+7 (495) 786-34-43    </li>
+                  <li> <a href="#">ref@ssd.ru </a></li>
+                </ul>
+              </div>
+              <div class="col col_12">
+                <ul class="contact">
+                  <li> <strong>Режим работы</strong></li>
+                  <li>понедельник – пятница: с 9.00 до 17.00 </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="popup__close js-close-popup"></button>
+    </div>
     <div class="footer">
       <div class="l-center">
         <div class="footer__meta">Copyright 2007 ЗАО "Связьстройдеталь" </div>
@@ -164,6 +241,7 @@
         </div>
       </div>
     </div>
+    <div class="overlay js-overlay"></div>
     <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
   </body>
 </html>

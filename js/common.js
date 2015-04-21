@@ -211,5 +211,13 @@ head.ready(function() {
 		return false;
 	});
 
+	$(".js-open-parent").on("click", function(){
+		var text = $(this).text();
+		var attr = $(this).attr("data-text");
+		$(this).parents(".js-parent").toggleClass("is-open");
+		$(this).attr("data-text", text);
+		$(this).children().text(attr);
+		return false;
+	});
 
 });
