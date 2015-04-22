@@ -63,8 +63,260 @@ html
 						.col.col_2
 							.row
 								.col.col_12
-									
+									.widget
+										.widget__head
+											.currency
+												span.currency__title Курсы ЦБ РФ:
+												span.currency__val
+													i.icon-currency  $
+													| 67,82
+												span.currency__val
+													i.icon-currency €
+													| 76,29
+										.widget__body
+											.widget__scroll
+												.widget__in.js-group2
+													ul.tabs-list.tabs-list_small.js-tabs(data-tabs-group="js-group2")
+														li
+															a(href="#price-nds").is-active Цена с НДС
+														li
+															a(href="#price-no-nds") Цена без НДС
+													.tabs-cont.js-tabs-cont(data-id="#price-nds", style="display: block")
+														ul.table-list.table-list_small
+															li
+																div Валюта:
+																div 
+																	.select.select_small.js-select
+																		.select__main.js-select-text Рубли
+																		select
+																			option(value="Рубли") Рубли
+																			option(value="Доллары") Доллары
+																			option(value="Евро") Евро
+															li
+																div розница:
+																div 
+																	strong 4 852,00
+															li
+																div ед. изм.:
+																div 
+																	strong к-т
+															li
+																div опт. кол-во:
+																div 
+																	strong 50
+															li
+																div опт:
+																div 
+																	strong 4 560,88 (-6%)
+															li
+																div доп. скидка:
+																div 
+																	strong Есть
+													.tabs-cont.js-tabs-cont(data-id="#price-no-nds")
+														ul.table-list.table-list_small
+															li
+																div Валюта:
+																div 
+																	.select.select_small.js-select
+																		.select__main.js-select-text Рубли
+																		select
+																			option(value="Рубли") Рубли
+																			option(value="Доллары") Доллары
+																			option(value="Евро") Евро
+															li
+																div опт. кол-во:
+																div 
+																	strong 50
+															li
+																div опт:
+																div 
+																	strong 4 560,88 (-6%)
+															li
+																div доп. скидка:
+																div 
+																	strong Есть
+										.widget__footer
+											.number-title Количество
+											.number.number_width.js-number(data-max-number="100")
+												button.number__minus.js-minus-number(type="button")
+												input.number__input(value="5", maxlength="3")
+												button.number__plus.js-plus-number(type="button")
+											a.btn.btn_width(href="#") 
+												i.icon-basket
+												| Купить
 								.col.col_12
+									.widget.widget_mod
+										.widget__head
+											.widget__title Дополнительно
+										.widget__body
+											.widget__scroll.js-accord-group
+												.accord.accord_small.js-accord.is-open
+													.accord__title.js-accord-toggle 
+														| Инструкции по монтажу
+													.accord__body.js-accord-list(style="display:block")
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+												.accord.accord_small.js-accord
+													.accord__title.js-accord-toggle 
+														| Декларации о соответствии
+													.accord__body.js-accord-list
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+												.accord.accord_small.js-accord
+													.accord__title.js-accord-toggle 
+														| Видеоинструкции
+													.accord__body.js-accord-list
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+														a.file-item(href="#")
+															.file-item__main
+																i.icon-pdf
+																span Декларация МОГ-Т
+															.file-item__meta 541,45 КБ
+										.widget__footer
+											a.link-icon(href="#")
+												i.icon-basket
+												span Сопутсвующие товары и аналоги
+							.tabs-box.js-group1
+								ul.tabs-list.js-tabs(data-tabs-group="js-group1")
+									li
+										a(href="#characteristics").is-active Характеристики
+									li
+										a(href="#picking") Комплектации
+								.tabs-cont.js-tabs-cont(data-id="#characteristics", style="display: block")
+									ul.table-list
+										li
+											div Емкость сварных соединений в КДЗС
+											div 
+												strong 216
+										li
+											div Макс. кол-во касет КТ
+											div 
+												strong 4
+										li
+											div Макс. кол-во касет КУ
+											div 
+												strong -
+										li
+											div Макс. кол-во касет КМ
+											div 
+												strong -
+										li
+											div Макс. кол-во касет КС
+											div 
+												strong -
+										li
+											div Макс. кол-во касет КВ
+											div 
+												strong -
+										li
+											div Макс. кол-во касет К48
+											div 
+												strong -
+										li
+											div Необходимость кабельных вводов
+											div 
+												strong есть
+										li
+											div Способ герметизации
+											div 
+												strong «горячий»
+										li
+											div Длинна, мм. 
+											div 
+												strong 527 
+										li
+											div Диаметр, мм.
+											div 
+												strong 159
+										li
+											div Масса, кг.
+											div 
+												strong 3,8
+								.tabs-cont.js-tabs-cont(data-id="#picking")
+									ul.table-list
+										li
+											div Макс. кол-во касет КС
+											div 
+												strong -
+										li
+											div Макс. кол-во касет КВ
+											div 
+												strong -
+										li
+											div Макс. кол-во касет К48
+											div 
+												strong -
+										li
+											div Необходимость кабельных вводов
+											div 
+												strong есть
+										li
+											div Способ герметизации
+											div 
+												strong «горячий»
+										li
+											div Длинна, мм. 
+											div 
+												strong 527 
+										li
+											div Диаметр, мм.
+											div 
+												strong 159
+										li
+											div Масса, кг.
+											div 
+												strong 3,8
+
 						button.product-item__more.js-open-parent(type="button", data-text="Скрыть") 
 							span Показать все
 					.items-wrap.items-wrap_group

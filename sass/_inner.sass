@@ -350,6 +350,19 @@ a.btn_small
 .accord
 	border: 1px solid $border
 	margin-bottom: -1px
+	&_small
+		border-left: 0
+		border-right: 0
+		&.is-open
+			background: $light
+		.accord__title
+			padding: 10px 53px 10px 20px 
+			font-size: 14px
+			+bold
+		.accord__body
+			padding: 0 20px 
+			border-top: 0 
+			
 	&.is-open
 		.accord__title
 			color: $red
@@ -699,6 +712,10 @@ a.btn_small
 	&_red
 		.price__val
 			color: $red 
+.number-title
+	margin-bottom: 20px
+	font-size: 16px
+	color: $black 
 .number
 	position: relative
 	display: inline-block
@@ -753,7 +770,8 @@ a.btn_small
 			width: 2px
 			height: 14px
 			background: $red
-			
+.number_width
+	width: 100%
 .btn-del
 	display: inline-block
 	width: 40px
@@ -1060,6 +1078,7 @@ a.btn_small
 .select
 	position: relative
 	margin-bottom: 38px
+	text-align: left
 	&__main
 		position: relative
 		border: 1px solid $border
@@ -1085,7 +1104,14 @@ a.btn_small
 		height: 100%
 		opacity: 0
 		max-height: 200px
-		
+.select_small
+	margin-bottom: 22px
+	.select__main
+		padding: 0 30px 0 10px 
+		height: 30px
+		line-height: 30px
+		color: $gray_d 	
+		+reg
 .contact
 	font-size: 14px
 	margin-bottom: 20px
@@ -1238,3 +1264,171 @@ a.btn_small
 				position: absolute
 				left: 0
 				top: 2px
+
+.tabs-box
+	border: 1px solid $border
+	padding: 0 20px 10px
+	background: $light 
+.tabs-list
+	display: table
+	margin-bottom: 13px
+	border-bottom: 1px solid $border 
+	width: 100%
+	font-size: 24px
+	table-layout: fixed
+	li
+		display: table-cell
+		vertical-align: middle
+	a
+		display: inline-block
+		position: relative
+		border-bottom: 3px solid transparent
+		padding: 13px 0 
+		color: $text 
+		&:hover
+			color: $red_d 
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			width: 0
+			bottom: -4px
+			height: 3px 
+			background: none
+			+tr(width .3s)
+		&.is-active
+			&:after
+				background: $red 
+				width: 100%
+.tabs-list_small
+	font-size: 18px
+	a
+		padding: 4px 0 
+		&:after
+			height: 2px
+.table-list
+	font-size: 14px
+	li
+		padding: 15px 0 
+		+clr
+		> div
+			float: left
+			width: 50%
+			&:last-child
+				text-align: right
+.table-list_small
+	color: $gray_d
+	li
+		padding: 0 
+	strong
+		color: $black 
+		font-size: 16px	
+.widget
+	position: relative
+	overflow: hidden
+	margin-bottom: 20px
+	height: 500px
+	border: 1px solid $border
+	&_mod
+		.widget__body
+			bottom: 80px
+		.widget__footer
+			height: 80px
+			line-height: 80px
+			padding: 0 20px 
+	&__in
+		padding: 10px 20px
+	&__head
+		padding: 0 20px 
+		height: 60px
+		line-height: 60px
+		border-bottom: 1px solid $border 
+	&__title
+		font-size: 24px
+	&__body
+		position: absolute
+		top: 60px
+		bottom: 180px
+		left: 0
+		right: 0
+		.accord
+			&:first-child
+				border-top: 0
+	&__scroll
+		height: 100%
+		margin-right: -20px
+		padding-right: 20px
+		overflow-y: auto
+	&__footer
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 180px
+		border-top: 1px solid $border
+		padding: 20px 
+		.btn
+			margin-top: 20px
+			i
+				position: absolute
+				left: 15px
+				top: 8px
+.currency
+	white-space: nowrap
+	&__title,
+	&__val
+		display: inline-block
+		vertical-align: middle
+	&__title
+		color: $gray_d
+		font-size: 14px
+	&__val
+		margin-left: 10px
+		font-size: 18px
+		+bold
+		color: $red  
+		i
+			margin-right: 4px
+			
+.link-icon
+	display: inline-block
+	vertical-align: middle
+	color: $black
+	font-size: 16px
+	+bold
+	+tr(color .3s)
+	line-height: 1.25
+	white-space: nowrap
+	&:hover
+		color: $red
+	i, span
+		vertical-align: middle
+		display: inline-block
+	i
+		font-size: 30px
+		color: $red 
+	span
+		padding-left: 20px
+		white-space: normal
+		
+
+.file-item
+	display: table
+	border-top: 1px solid $border 
+	width: 100%
+	&__main
+		display: table-cell
+		vertical-align: middle
+		padding: 10px 0 
+		font-size: 14px
+		color: $black 
+		i
+			vertical-align: bottom
+			margin-right: 7px
+	&__meta
+		display: table-cell
+		vertical-align: middle
+		text-align: right
+		font-size: 12px
+		+bold
+		color: $gray_d 
